@@ -65,11 +65,11 @@ wget https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz.md5
 md5sum -c nt.gz.md5 >md5sum.log
 unzip nt.gz
 ```
-### get accession numbers
+### Get accession numbers
 ```
 grep ">" nt | cut -d ' ' -f1 | tr -d ">"  >nt.accession 
 ```
-### get gene names
+### Get gene names
 ```
 grep ">" nt | cut -d ' ' -f2- >nt.genenames 
 ```
