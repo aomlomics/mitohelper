@@ -22,7 +22,7 @@ Astronesthes atlanticus
 Astronesthes gemmifer
 ```
 
-## !!! Input file warning !!!
+### !!! Input file warning !!!
 For best results, do not add different taxa hierarchies in the same input file. 
 e.g.
 ```
@@ -50,7 +50,7 @@ LC091794.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, 
 LC091795.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:113571
 AF092200.1#Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
 ```
-
+### Output file redundancy
 Note that some output files can be <b>redundant</b> to each other, depending on the taxonomic level. For example, if you performed a genus-level search, outputprefix_genus_hits.txt and outputprefix_species.hits.txt and outputprefix_fulltaxonomy.hits.txt will have the same information. If you performed a species-level search, outputprefix_species.hits.txt and outputprefix_fulltaxonomy.hits.txt will have the same information. 
 
 ## Preparing NCBI data (done in Unix environment)
