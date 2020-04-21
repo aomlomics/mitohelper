@@ -14,7 +14,6 @@ i=0
 while IFS= read -r line
 do
 i=$((i+1))
-fullcount=`grep -c "$line" 12S.list`
 echo "=== Searching query #$i===="
 fullcount=`grep -c "$line" 12S.list`
 echo "$line hits (full taxonomy): $fullcount"
