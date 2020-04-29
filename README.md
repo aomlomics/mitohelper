@@ -9,9 +9,15 @@ There are two versions of this script:
 - getMito.sh (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>
 
 Example:
-<b>getMito.sh input.txt OUT mitofish.hit.list</b> will search the list of mitochondrial accession numbers and genes and output the results for different taxonomic levels as <b>OUT</b>_genus.hits.txt, <b>OUT</b>_species.hits.txt and <b>OUT</b>_fulltaxonomy.hits.txt
+<b>getMito.sh input.txt OUT mitofish.hit.list</b> will search the list of mitochondrial accession numbers and genes. Results for different taxonomic levels will be saved as <b>OUT</b>_genus.hits.txt, <b>OUT</b>_species.hits.txt and <b>OUT</b>_fulltaxonomy.hits.txt
 
+## Reference files
+Reference files were prepared from downloaded MitoFish (<b>Apr 2 2020 update</b>) and NCBI data (<b>Apr 12 2020 version</b>). For data preparation pipeline, refer to </b>getMito.ipynb</b>, or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below:
 
+A user can choose from two reference files
+- 12S.list - List of NCBI acession numbers and gene description for 12S rRNA genes. Available at this GitHub repository.
+- mitofish.hit.list - List of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: 
+ 
 ## Input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
