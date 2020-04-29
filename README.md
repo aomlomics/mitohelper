@@ -121,7 +121,7 @@ grep -e "12S ribosomal" -e "12S rRNA" nt.list >12S.list
 ```
 
 ## Linking MitoFish data with NCBI data
-This python script creates a dictionary from the nt.list file. The key is the NCBI accession number and the value is the gene description. # This dictionary is then saved as a pickle named nt.pickle
+This python script creates a dictionary from the nt.list file. The key is the NCBI accession number and the value is the gene description. This dictionary is then saved as a pickle named <b>nt.pickle</b>.
 ```
 #!/usr/bin/python
 import pickle
@@ -138,8 +138,8 @@ with open("nt.list",'r') as f:
 with open("nt.pickle", 'wb') as handle:
     pickle.dump(ntdict, handle, protocol=pickle.HIGHEST_PROTOCOL)
  ```
-This second python script loads nt.pickle, then matches MitoFish entries with keys (NCBI accession numbers) in the pickle. It takes ~24 minutes to match 616,999 MitoFish records to 57,377,397 NCBI GenBank records. Resources used: 
-cpupercent=101,cput=00:22:53,mem=34500088kb,ncpus=24,vmem=34845840kb,walltime=00:23:34
+This second python script loads nt.pickle, then matches MitoFish entries with keys (NCBI accession numbers) in the pickle. It takes ~24 minutes to match 616,999 MitoFish records to 57,377,397 NCBI GenBank records. <i>Resources used: 
+cpupercent=101,cput=00:22:53,mem=34500088kb,ncpus=24,vmem=34845840kb,walltime=00:23:34</i>
 
 ```
 
