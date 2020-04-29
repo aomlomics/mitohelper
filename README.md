@@ -128,6 +128,7 @@ grep -e "12S ribosomal" -e "12S rRNA" nt.list >12S.list
 
 ## Linking MitoFish data with NCBI data
 This python script creates a dictionary from the nt.list file. The key is the NCBI accession number and the value is the gene description. This dictionary is then saved as a pickle named <b>nt.pickle</b>.
+
 ```
 #!/usr/bin/python
 import pickle
@@ -148,7 +149,6 @@ This second python script loads nt.pickle, then matches MitoFish entries with ke
 cpupercent=101,cput=00:22:53,mem=34500088kb,ncpus=24,vmem=34845840kb,walltime=00:23:34</i>
 
 ```
-
 #!/usr/bin/python
 
 import pickle
