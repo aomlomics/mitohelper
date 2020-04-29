@@ -1,5 +1,5 @@
-# getMito- Script to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined species list
-
+# getMito
+## Script to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined species list
 
 From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.list</b>) or mitochondrial sequences (reference file: </b>mitofish.hit.list</b>), if available. These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below.
 
@@ -11,12 +11,12 @@ There are two versions of this script:
 Example:
 <b>getMito.sh input.txt OUT mitofish.hit.list</b> will search the list of mitochondrial accession numbers and genes. Results for different taxonomic levels will be saved as <b>OUT</b>_genus.hits.txt, <b>OUT</b>_species.hits.txt and <b>OUT</b>_fulltaxonomy.hits.txt
 
-## Reference files
+## Reference files:
 Reference files were prepared from downloaded MitoFish (<b>Apr 2 2020 update</b>) and NCBI data (<b>Apr 12 2020 version</b>). For data preparation pipeline, refer to </b>getMito.ipynb</b>, or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below:
 
-A user can choose from two reference files
+A user can choose from two reference files:
 - 12S.list - List of NCBI acession numbers and gene description for 12S rRNA genes. Available at this GitHub repository.
-- mitofish.hit.list - List of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: 
+- mitofish.hit.list - List of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: https://drive.google.com/file/d/15KCkNB_EHN-dBG3bW3L6xnTgEUR5innm/view?usp=sharing
  
 ## Input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
