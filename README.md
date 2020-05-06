@@ -68,6 +68,27 @@ Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial 
 Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
+## Output log:
+While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. Duplicated query/queries, if present, will be marked as "Duplicate query:"
+```
+=== Searching user query #1 ===
+Query:Histioteuthis celetaria celetaria	Level:subspecies	# Hits:0
+Query:Histioteuthis celetaria	Level:species	# Hits:0
+Query:Histioteuthis	Level:genus	# Hits:1
+=== Searching user query #2 ===
+Query:Histioteuthis corona corona	Level:subspecies	# Hits:0
+Query:Histioteuthis corona	Level:species	# Hits:0
+Duplicate query: Genus Histioteuthis has already been processed.
+=== Searching user query #3 ===
+Query:Stomias boa boa	Level:subspecies	# Hits:0
+Query:Stomias boa	Level:species	# Hits:2
+Query:Stomias	Level:genus	# Hits:11
+=== Searching user query #4 ===
+Query:Lampadena urophaos atlantica	Level:subspecies	# Hits:0
+Query:Lampadena urophaos	Level:species	# Hits:3
+Query:Lampadena	Level:genus	# Hits:5
+ ```
+ 
 
 ## Preparing MitoFish data
 
