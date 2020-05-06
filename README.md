@@ -51,9 +51,10 @@ One to two output files will be generated, depending on the taxonomic level of y
 - <b>outputprefix</b>_species.hits.txt 
 - <b>outputprefix</b>_subspecies.hits.txt
   
-Output file is tab-separated with the following fields:
+Output file is tab-separated with the following fields: 
 <br>Query, taxonomic level, GenBank accession number, gene description
-<br>e.g. <outputprefix>_species.hits.txt
+<br>
+<br>Example content of outputprefix_species.hits.txt:
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
@@ -89,7 +90,6 @@ Query:Lampadena urophaos	Level:species	# Hits:3
 Query:Lampadena	Level:genus	# Hits:5
  ```
  
-
 ## Preparing MitoFish data
 
 MitoFish website: http://mitofish.aori.u-tokyo.ac.jp/download.html
