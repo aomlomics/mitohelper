@@ -5,7 +5,7 @@ From a user-provided list of genera/species/subspecies, this script extracts the
 
 ## Usage
 There are two versions of this script:
-- getMito.ipynb (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
+- <b>getMito.ipynb </b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
  <br>1. Input file (with extension; e.g. input.txt)
  <br>2. Output prefix (e.g. OUT)
  <br>3. Reference database (12S.ref.tsv or mitofish.ref.tsv)
