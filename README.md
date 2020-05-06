@@ -1,11 +1,14 @@
 # getMito
-## Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
+#### Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
 From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below.
 
 ## Usage
 There are two versions of this script:
-- getMito.ipynb (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: #1 input file (with extension; e.g. input.txt), #2 output prefix (e.g. OUT) and #2 reference database (12S.ref.tsv or mitofish.ref.tsv)
+- getMito.ipynb (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
+ <br>1. Input file (with extension; e.g. input.txt)
+ <br>2. Output prefix (e.g. OUT)
+ <br>3. Reference database (12S.ref.tsv or mitofish.ref.tsv)
 - getMito.sh (shell; no longer updated since v0.1) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. This does the same as the python script, but does not deduplicate query nor automatically detect taxonomic level of each query.
 
 
@@ -64,7 +67,6 @@ Alepisaurus ferox       species LC091794.1      Alepisaurus ferox mitochondrial 
 Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:113571
 Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
-
 ```
 
 ## Preparing MitoFish data
