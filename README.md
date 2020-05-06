@@ -17,7 +17,7 @@ Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>
 
 A user can choose from two reference files:
 - <b>12S.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for 12S rRNA genes. Available here.
-- <b>mitofish.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: https://drive.google.com/file/d/15KCkNB_EHN-dBG3bW3L6xnTgEUR5innm/view?usp=sharing
+- <b>mitofish.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~502 MB) could not be uploaded here. Download from: https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing
  
 ## Input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
