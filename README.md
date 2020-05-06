@@ -46,14 +46,14 @@ Stomias
 
 ## Output files:
 One to two output files will be generated, depending on the taxonomic level of your query.
-E.g. If there are no subspecies in your query file, no subspecies hits file will be generated
+<br>E.g. If there are no subspecies in your query file, no subspecies hits file will be generated
 - <b>outputprefix</b>_genus.hits.txt
 - <b>outputprefix</b>_species.hits.txt 
 - <b>outputprefix</b>_subspecies.hits.txt
   
 Output file is tab-separated with the following fields:
-Query, taxonomic level, GenBank accession number, gene description
-e.g. <outputprefix>_species.hits.txt
+<br>Query, taxonomic level, GenBank accession number, gene description
+<br>e.g. <outputprefix>_species.hits.txt
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
@@ -69,7 +69,7 @@ Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosom
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
 ## Output log:
-While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. Duplicated query/queries, if present, will be marked as "Duplicate query:"
+While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. <br>Duplicated query/queries, if present, will be marked as "Duplicate query:"
 ```
 === Searching user query #1 ===
 Query:Histioteuthis celetaria celetaria	Level:subspecies	# Hits:0
