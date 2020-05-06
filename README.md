@@ -1,68 +1,71 @@
 # getMito
-## Script to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined species list
+## Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
-From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.list</b>) or mitochondrial sequences (reference file: </b>mitofish.hit.list</b>), if available. These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below.
+From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below.
 
 ## Usage
 There are two versions of this script:
-- getMito.ipynb (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: #1 input file (with extension; e.g. input.txt), #2 output prefix (e.g. OUT) and #2 reference database (12S.list or mitofish.hit.list)
-- getMito.sh (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>
+- getMito.ipynb (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: #1 input file (with extension; e.g. input.txt), #2 output prefix (e.g. OUT) and #2 reference database (12S.ref.tsv or mitofish.ref.tsv)
+- getMito.sh (shell; no longer updated since v0.1) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. This does the same as the python script, but does not deduplicate query nor automatically detect taxonomic level of each query.
 
-Example:
-<b>getMito.sh input.txt OUT mitofish.hit.list</b> will search the list of mitochondrial accession numbers and genes. Results for different taxonomic levels will be saved as <b>OUT</b>_genus.hits.txt, <b>OUT</b>_species.hits.txt and <b>OUT</b>_fulltaxonomy.hits.txt
 
 ## Reference files:
 Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the <i>Preparing MitoFish data</i>, <i>Preparing NCBI data</i> and <i>Linking MitoFish data with NCBI data</i> sections below:
 
 A user can choose from two reference files:
-- <b>12S.list</b> - List of NCBI acession numbers and gene description for 12S rRNA genes. Available at this GitHub repository.
-- <b>mitofish.hit.list</b> - List of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: https://drive.google.com/file/d/15KCkNB_EHN-dBG3bW3L6xnTgEUR5innm/view?usp=sharing
+- <b>12S.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for 12S rRNA genes. Available here.
+- <b>mitofish.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~516 MB) could not be uploaded here. Download from: https://drive.google.com/file/d/15KCkNB_EHN-dBG3bW3L6xnTgEUR5innm/view?usp=sharing
  
 ## Input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
 ```
-Argyropelecus aculeatus
-Argyropelecus affinis
-Argyropelecus gigas
-Argyropelecus hemigymnus
-Argyropelecus olfersii
-Argyropelecus sladeni
-Aristostomias xenostoma
-Astronesthes atlanticus
-Astronesthes gemmifer
+Histioteuthis celetaria celetaria
+Histioteuthis corona corona
+Stomias boa boa
+Lampadena urophaos atlantica
+Notoscopelus elongatus kroyeri
+Scopelogadus mizolepis mizolepis
+Stomias boa boa
+Abraliopsis pfefferi
+Ahliesaurus berryi
+Alepisaurus ferox
+Amphitretus pelagicus
+Anoplogaster cornuta
+Poromitra
+Pseudoscopelus
+Scopelarchus
+Scopeloberyx
+Scopelosaurus
+Sternoptyx
+Stomias
 ```
-
-### !!! Input file warning !!!
-For best results, do not add different taxa hierarchies in the same input file. 
-e.g.
-```
-Argyropelecus aculeatus
-Argyropelecus affinis
-Argyropelecus gigas
-Astronesthes
-Aristrostomias
-```
-Have a separate file for genus names only (if you only have genus information), species names (if you have species information), and subspecies names (if you have subspecies information). Else, the output files will contain a mix of genus, species and subspecies hits.
 
 ## Output files:
-3 output files will be generated 
+One to two output files will be generated, depending on the taxonomic level of your query.
+E.g. If there are no subspecies in your query file, no subspecies hits file will be generated
 - <b>outputprefix</b>_genus.hits.txt
 - <b>outputprefix</b>_species.hits.txt 
-- <b>outputprefix</b>_fulltaxonomy.hits.txt
+- <b>outputprefix</b>_subspecies.hits.txt
   
-Output file is separated by "#" in the format: GenBank_Accession#Gene_description
-e.g.
+Output file is tab-separated with the following fields:
+Query, taxonomic level, GenBank accession number, gene description
+e.g. <outputprefix>_species.hits.txt
 ```
-NCBIAF092181.1#Alepisaurus ferox 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
-LC021097.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:10875
-LC091793.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221156
-LC091794.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:117706
-LC091795.1#Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:113571
-AF092200.1#Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
+Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
+Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
+Lampadena urophaos      species LC026535.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
+Lampadena urophaos      species LC026536.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
+Lampadena urophaos      species LC146002.1      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
+Alepisaurus ferox       species AF092181.1      Alepisaurus ferox 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
+Alepisaurus ferox       species LC021097.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:10875
+Alepisaurus ferox       species LC091793.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221156
+Alepisaurus ferox       species LC091794.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:117706
+Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:113571
+Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
+Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
+
 ```
-### Output file redundancy
-Note that some output files can be <b>redundant</b> to each other, depending on the taxonomic level. For example, if you performed a genus-level search, outputprefix_genus_hits.txt and outputprefix_species.hits.txt and outputprefix_fulltaxonomy.hits.txt will have the same information. If you performed a species-level search, outputprefix_species.hits.txt and outputprefix_fulltaxonomy.hits.txt will have the same information. 
 
 ## Preparing MitoFish data
 
@@ -83,9 +86,8 @@ ls *.txt | cut -d '_' -f1,2 >complete.accession
 # get species names
 ls *.txt | cut -d '_' -f3- | sed "s/.txt/#complete mitogenomes/g" >complete.species
 
-# Make a list of accession number and species, separated by "#"
-paste -d "#" complete.accession complete.species >complete.list
-
+# Make a tab-separated list of accession number and species
+paste -d "\t" complete.accession complete.species >complete.list
 ```
 #### Download and process complete+partial mDNA sequence file: 
 
@@ -117,13 +119,14 @@ grep ">" nt | cut -d ' ' -f1 | tr -d ">"  >nt.accession
 ```
 grep ">" nt | cut -d ' ' -f2- >nt.genenames 
 ```
-### Make a list of accession number and species, separated by "#"
+### Make a tab-separated list of accession number and species
 ```
-paste -d "#" nt.accession nt.genenames >nt.list
+paste -d "\t" nt.accession nt.genenames >nt.list
+cd ..
 ```
 ### Extract (grep) 12S genes from NCBI records and create the 12S.list reference 
 ```
-grep -e "12S ribosomal" -e "12S rRNA" nt.list >12S.list
+grep -e "12S ribosomal" -e "12S rRNA" nt.list >12S.ref.tsv
 ```
 
 ## Linking MitoFish data with NCBI data
@@ -137,7 +140,7 @@ ntdict = {'Accession':'Gene description'}
 with open("nt.list",'r') as f:
     for line in f:
         line = line.rstrip()
-        entry = line.split("#")
+        entry = line.split("\t")
         fullacc=entry[0].split(".")
         newentry={fullacc[0]:entry[1]} 
         ntdict.update(newentry)
@@ -177,10 +180,10 @@ with open("mitofish.accession",'r') as infile:
         inline = inline.rstrip()
         count +=1
         if inline in NCBI:
-            output.write("%s#%s\n" % (inline,NCBI[inline]))
+            output.write("%s\t%s\n" % (inline,NCBI[inline]))
         elif inline not in NCBI:
-            output.write("%s#No hit found!\n" % inline)
-            print("%s#No hit found!" % inline)
+            output.write("%s\tNo hit found!\n" % inline)
+            print("%s\tNo hit found!" % inline)
             nohit +=1
             
 output.close()
@@ -188,6 +191,7 @@ output.close()
 print ("==== Run complete! ===")
 print ("Total: %d accession numbers" % count)
 print ("No hits for %d input accession numbers!" % nohit)
+
 ```
 ### Pick up "missing" accession numbers 
 
@@ -238,7 +242,7 @@ done
 Output file is <b>nohit.genes</b>. First, let's clean up the output file by removing non-specific matches and removing the regular expression patterns following the accession numbers:
 
 ```
-grep "#" nohit.genes | sed "s/.\[0\-9\]//g" >nohit.genes.clean
+grep -P '\t' nohit.genes | sed "s/.\[0\-9\]//g" >nohit.genes.clean
 ```
 
 Now, combine <b>hit.list</b> (accession numbers with exact matches with NCBI accession numbers) with <b>nohit.genes.clean</b> (accession numbers with duplicated sequences). The output file will be <b>mitofish.hit.list</b>:
