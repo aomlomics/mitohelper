@@ -1,5 +1,5 @@
 # getMito
-#### Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
+#### Scripts to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
 - From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. - These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). 
 - For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <i>Preparing MitoFish data</i>, <i>Preparing NCBI data</i> and <i>Linking MitoFish data with NCBI data</i> sections below.
