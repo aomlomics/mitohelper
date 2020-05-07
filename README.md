@@ -35,14 +35,14 @@ Lampadena urophaos atlantica
 One to two output files will be generated, depending on the taxonomic level of your query.
 <br>For example, if there are no subspecies in your query file, no subspecies hits file will be generated.
 <br>If none of the subspecies in your query file returns a hit, a blank subspecies hits file will be generated.
-- <b>outputprefix</b>_genus.hits.tsv
-- <b>outputprefix</b>_species.hits.tsv 
-- <b>outputprefix</b>_subspecies.hits.tsv
+- <<b>outputprefix</b>>_genus.hits.tsv
+- <<b>outputprefix</b>>_species.hits.tsv 
+- <<b>outputprefix</b>>_subspecies.hits.tsv
   
 Output file is tab-separated with the following fields: 
 - <b>Query, taxonomic level, GenBank accession number, gene description</b>
 
-<br>Example output file <i>OUT_species.hits.tsv</i>:
+<br>Example output file <<i>OUT_species.hits.tsv</i>>:
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
@@ -57,7 +57,7 @@ Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial 
 Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
-### ! Output file differences between python and shell versions
+### ! Output file differences between python and shell versions !
 - The python version always outputs the correct query in the first field. 
 - In the shell version, the query is "back calculated" from the output file, so if the hit GenBank record contains a duplicate sequence from another taxon, the first taxon will always be reported as the query.
 
@@ -73,7 +73,7 @@ Chauliodus    genus   JN311785        Chauliodus sloani voucher BW-A10860 cytoch
 ## Output log:
 While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. 
 
-### ! Output log differences between python and shell versions
+### ! Output log differences between python and shell versions !
 - In the python version, duplicated query/queries, if present, will be marked as "Duplicate query:"
 - In the shell version, duplicated query/queries will be counted as usual and not be marked as "Duplicate query". However, the output file will still be deduplicated.
 
