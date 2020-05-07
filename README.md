@@ -2,16 +2,16 @@
 #### Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
 - From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. - These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). 
-- For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <b>Preparing MitoFish data</b>, <b>Preparing NCBI data</b> and <b>Linking MitoFish data with NCBI data</b> sections below.
+- For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <u>Preparing MitoFish data</u>, <u>Preparing NCBI data</u> and <u>Linking MitoFish data with NCBI data</u> sections below.
 
 ## Usage
 There are two versions of this script:
-- <b>getMito.ipynb</b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
- <br>1. Input file (with extension; e.g. input.txt)
- <br>2. Output prefix (e.g. OUT)
- <br>3. Reference database (12S.ref.tsv or mitofish.ref.tsv)
-- <b>getMito.sh</b> (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
- <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <b>output files</b> and <b>output log</b> section below).
+1. <b>getMito.ipynb</b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
+ - Input file (with extension; e.g. input.txt)
+ - Output prefix (e.g. OUT)
+ - Reference database (12S.ref.tsv or mitofish.ref.tsv)
+2. <b>getMito.sh</b> (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
+ <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <u>output files</u> and <u>output log</u> section below).
 
 
 ## Reference files:
