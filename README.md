@@ -55,9 +55,9 @@ One to two output files will be generated, depending on the taxonomic level of y
 - <b>outputprefix</b>_subspecies.hits.tsv
   
 Output file is tab-separated with the following fields: 
-<br>Query, taxonomic level, GenBank accession number, gene description
-<br>
-<br>Example content of outputprefix_species.hits.tsv:
+- <b>Query, taxonomic level, GenBank accession number, gene description</b>
+
+<br>Example content of <i>outputprefix_species.hits.tsv</i>:
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
@@ -73,8 +73,9 @@ Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosom
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
 ### ! Output file differences between python and shell versions
-The python version always outputs the correct query in the first field. 
-<br>In the shell version, the query is "back calculated" from the output file, so if the hit GenBank record contains a duplicate sequence from another taxon, the first taxon will always be reported as the query.
+- The python version always outputs the correct query in the first field. 
+- In the shell version, the query is "back calculated" from the output file, so if the hit GenBank record contains a duplicate sequence from another taxon, the first taxon will always be reported as the query.
+
 <br>In the example below, GenBank record JN311785 is matched to two species Chauliodus sloani and Stomias sp. If the user's query is "Stomias", the python version will output the correct query in the first column:
 ```
 Stomias       genus   JN312424        Chauliodus sloani voucher BW-A10860 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrialJN312424.1 Stomias sp. FOAN072-11 voucher BW-A10865 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial
@@ -88,8 +89,8 @@ Chauliodus    genus   JN311785        Chauliodus sloani voucher BW-A10860 cytoch
 While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. 
 
 ### ! Output log differences between python and shell versions
-<br>In the python version, duplicated query/queries, if present, will be marked as "Duplicate query:"
-<br>In the shell version, duplicated query/queries will be counted as usual and not be marked as "Duplicate query". However, the output file will still be deduplicated.
+- In the python version, duplicated query/queries, if present, will be marked as "Duplicate query:"
+- In the shell version, duplicated query/queries will be counted as usual and not be marked as "Duplicate query". However, the output file will still be deduplicated.
 
 <br>Python screen output:
 ```
