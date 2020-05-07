@@ -6,11 +6,12 @@
 
 ## Usage
 There are two versions of this script:
-- <b>getMito.ipynb </b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
+- <b>getMito.ipynb</b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
  <br>1. Input file (with extension; e.g. input.txt)
  <br>2. Output prefix (e.g. OUT)
  <br>3. Reference database (12S.ref.tsv or mitofish.ref.tsv)
-- getMito.sh (shell; no longer updated since v0.1) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. This does the same as the python script, but does not deduplicate query nor automatically detect taxonomic level of each query.
+- <b>getMito.sh</b> (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
+ <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <b>output files</b> and <b>output log</b> section below).
 
 
 ## Reference files:
@@ -47,15 +48,16 @@ Stomias
 
 ## Output files:
 One to two output files will be generated, depending on the taxonomic level of your query.
-<br>E.g. If there are no subspecies in your query file, no subspecies hits file will be generated
-- <b>outputprefix</b>_genus.hits.txt
-- <b>outputprefix</b>_species.hits.txt 
-- <b>outputprefix</b>_subspecies.hits.txt
+<br>For example, if there are no subspecies in your query file, no subspecies hits file will be generated.
+<br>If none of the subspecies in your query file returns a hit, a blank subspecies hits file will be generated.
+- <b>outputprefix</b>_genus.hits.tsv
+- <b>outputprefix</b>_species.hits.tsv 
+- <b>outputprefix</b>_subspecies.hits.tsv
   
 Output file is tab-separated with the following fields: 
 <br>Query, taxonomic level, GenBank accession number, gene description
 <br>
-<br>Example content of outputprefix_species.hits.txt:
+<br>Example content of outputprefix_species.hits.tsv:
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
@@ -70,8 +72,26 @@ Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial 
 Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
 Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
+### ! Output file differences between python and shell versions
+The python version always outputs the correct query in the first field. 
+<br>In the shell version, the query is "back calculated" from the output file, so if the hit GenBank record contains a duplicate sequence from another taxon, the first taxon will always be reported as the query.
+<br>In the example below, GenBank record JN311785 is matched to two species Chauliodus sloani and Stomias sp. If the user's query is "Stomias", the python version will output the correct query in the first column:
+```
+Stomias       genus   JN312424        Chauliodus sloani voucher BW-A10860 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrialJN312424.1 Stomias sp. FOAN072-11 voucher BW-A10865 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial
+```
+The shell version will output the query as Chauliodus instead of Stomias, because it is the first taxon represented in the GenBank record:
+```
+Chauliodus    genus   JN311785        Chauliodus sloani voucher BW-A10860 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrialJN312424.1 Stomias sp. FOAN072-11 voucher BW-A10865 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial
+```
+
 ## Output log:
-While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. <br>Duplicated query/queries, if present, will be marked as "Duplicate query:"
+While running, the script will also print out your query, and the number of hits for each matching taxonomic level to the screen. 
+
+### ! Output log differences between python and shell versions
+<br>In the python version, duplicated query/queries, if present, will be marked as "Duplicate query:"
+<br>In the shell version, duplicated query/queries will be counted as usual and not be marked as "Duplicate query". However, the output file will still be deduplicated.
+
+<br>Python screen output:
 ```
 === Searching user query #1 ===
 Query:Histioteuthis celetaria celetaria	Level:subspecies	# Hits:0
@@ -90,7 +110,26 @@ Query:Lampadena urophaos atlantica	Level:subspecies	# Hits:0
 Query:Lampadena urophaos	Level:species	# Hits:3
 Query:Lampadena	Level:genus	# Hits:5
  ```
- 
+<br>Shell screen output:
+```
+=== Searching query #1====
+Query:Histioteuthis celetaria celetaria Level:subspecies        # Hits: 0
+Query:Histioteuthis celetaria   Level:species   # Hits: 0
+Query:Histioteuthis     Level:genus     # Hits: 1
+=== Searching query #2====
+Query:Histioteuthis corona corona       Level:subspecies        # Hits: 0
+Query:Histioteuthis corona      Level:species   # Hits: 0
+Query:Histioteuthis     Level:genus     # Hits: 1
+=== Searching query #3====
+Query:Stomias boa boa   Level:subspecies        # Hits: 0
+Query:Stomias boa       Level:species   # Hits: 2
+Query:Stomias   Level:genus     # Hits: 11
+=== Searching query #4====
+Query:Lampadena urophaos atlantica      Level:subspecies        # Hits: 0
+Query:Lampadena urophaos        Level:species   # Hits: 3
+Query:Lampadena Level:genus     # Hits: 5
+```
+
 ## Preparing MitoFish data
 
 MitoFish website: http://mitofish.aori.u-tokyo.ac.jp/download.html
