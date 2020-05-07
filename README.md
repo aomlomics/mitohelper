@@ -2,7 +2,7 @@
 #### Python Jupyter notebook to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
 - From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. - These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). 
-- For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <u>Preparing MitoFish data</u>, <u>Preparing NCBI data</u> and <u>Linking MitoFish data with NCBI data</u> sections below.
+- For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <i>Preparing MitoFish data</i>, <i>Preparing NCBI data</i> and <i>Linking MitoFish data with NCBI data</i> sections below.
 
 ## Usage
 There are two versions of this script:
@@ -11,7 +11,7 @@ There are two versions of this script:
  - Output prefix (e.g. OUT)
  - Reference database (12S.ref.tsv or mitofish.ref.tsv)
 2. <b>getMito.sh</b> (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
- <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <u>output files</u> and <u>output log</u> section below).
+ <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below).
 
 
 ## Reference files:
@@ -29,21 +29,6 @@ Histioteuthis celetaria celetaria
 Histioteuthis corona corona
 Stomias boa boa
 Lampadena urophaos atlantica
-Notoscopelus elongatus kroyeri
-Scopelogadus mizolepis mizolepis
-Stomias boa boa
-Abraliopsis pfefferi
-Ahliesaurus berryi
-Alepisaurus ferox
-Amphitretus pelagicus
-Anoplogaster cornuta
-Poromitra
-Pseudoscopelus
-Scopelarchus
-Scopeloberyx
-Scopelosaurus
-Sternoptyx
-Stomias
 ```
 
 ## Output files:
@@ -57,7 +42,7 @@ One to two output files will be generated, depending on the taxonomic level of y
 Output file is tab-separated with the following fields: 
 - <b>Query, taxonomic level, GenBank accession number, gene description</b>
 
-<br>Example content of <i>outputprefix_species.hits.tsv</i>:
+<br>Example output file <i>OUT_species.hits.tsv</i>:
 ```
 Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
 Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
