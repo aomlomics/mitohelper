@@ -13,11 +13,11 @@ There are three versions of the getMito main script:
  - Usage: python getMito.py -i <input file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
  - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
  - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
-<br>
+
 2. <b>getMito.ipynb</b> 
  - Dependency: Jupyter notebook (Python 3). 
  - Usage: scroll down to the last cell in the notebook, click "Run", and type in the three inputs required sequentially (input file, output prefix, and choice of reference database) in the white box below the cell
-<br> 
+
 3. <b>getMito.sh</b>  
  - Dependency: Unix shell
  - Usage: getMito.sh <inputfile> <output_prefix> <12S.ref.tsv or mitofish.ref.tsv>. 
