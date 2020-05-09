@@ -32,7 +32,7 @@ Stomias boa boa
 Lampadena urophaos atlantica
 ```
 ## Reference files:
-Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the the [getMito wiki](https://github.com/shenjean/getMito/wiki) 
+Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the the [getMito wiki](https://github.com/shenjean/getMito/wiki). 
 
 A user can choose from two reference files:
 1. <b>12S.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for 12S rRNA genes. Available here.
