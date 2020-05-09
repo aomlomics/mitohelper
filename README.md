@@ -3,7 +3,7 @@
 
 From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. Please see overview below for a quick start guide. Refer to the [getMito wiki](https://github.com/shenjean/getMito/wiki) for more detailed explanations of getMito.
 
-#### Script usage and dependencies
+## Script usage and dependencies
 There are three versions of the getMito main script:
 <br>
 1. <b>getMito.py</b> 
@@ -22,7 +22,7 @@ There are three versions of the getMito main script:
  - Usage: getMito.sh <inputfile> <output_prefix> <12S.ref.tsv or mitofish.ref.tsv>. 
  - This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below). 
 
-#### Input file:
+## Input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
 ```
@@ -31,14 +31,14 @@ Histioteuthis corona corona
 Stomias boa boa
 Lampadena urophaos atlantica
 ```
-#### Reference files:
+## Reference files:
 Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the the [getMito wiki](https://github.com/shenjean/getMito/wiki) 
 
 A user can choose from two reference files:
 1. <b>12S.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for 12S rRNA genes. Available here.
 2. <b>mitofish.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~502 MB) could not be uploaded here. Download from [here](https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing) instead.
 
-#### Output files:
+## Output files:
 Output files are tab-separated with the following fields: Query, taxonomic level, GenBank accession number, gene description
 
 <br>Example output file <<i>OUT_species.hits.tsv</i>>:
