@@ -6,20 +6,21 @@
 
 ## Script usage and dependencies
 There are three versions of the getMito main script:
-1.<b>getMito.py</b> 
+<br>
+1. <b>getMito.py</b> 
  - Dependencies: Python 3 and the <b>click</b> package. 
  - Click is a conda- and pip-installable package that simplifies command-line interfaces and handling of arguments. Read the documentation here: http://click.pocoo.org/5/.
  - Usage: python getMito.py -i <input file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
- - Example: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
-
-2.<b>getMito.ipynb</b> - Jupyter notebook (Python 3). Scroll down to the last cell in the notebook, click "Run", and type in the three inputs required sequentially in the white box below the cell: 
- - Input file (with extension; e.g. input.txt)
- - Output prefix (e.g. OUT)
- - Reference database (12S.ref.tsv or mitofish.ref.tsv)
- 
-2. <b>getMito.sh</b>  
+ - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
+ - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
+<br>
+2. <b>getMito.ipynb</b> 
+ - Dependency: Jupyter notebook (Python 3). 
+ - Usage: scroll down to the last cell in the notebook, click "Run", and type in the three inputs required sequentially (input file, output prefix, and choice of reference database) in the white box below the cell
+<br> 
+3. <b>getMito.sh</b>  
  - Dependency: Unix shell
- - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
+ - Usage: getMito.sh <inputfile> <output_prefix> <12S.ref.tsv or mitofish.ref.tsv>. 
  - This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below). 
 
 ## Reference files:
