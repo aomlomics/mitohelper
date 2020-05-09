@@ -4,15 +4,23 @@
 - From a user-provided list of genera/species/subspecies, this script extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. - These accession numbers are prepared from downloaded MitoFish (Apr 2 2020 update) and NCBI data (Apr 12 2020 version). 
 - For data preparation pipeline, refer to </b>getMito.ipynb</b> or the <i>Preparing MitoFish data</i>, <i>Preparing NCBI data</i> and <i>Linking MitoFish data with NCBI data</i> sections below.
 
-## Usage
-There are two versions of this script:
-1. <b>getMito.ipynb</b> (python) - Run in Jupyter notebook interactively. Scroll down to the last cell in the notebook, click "Run", and type in three inputs sequentially in the white box below the cell: 
+## Script usage and dependencies
+There are three versions of the getMito main script:
+1.<b>getMito.py</b> 
+ - Dependencies: Python 3 and the <b>click</b> package. 
+ - Click is a conda- and pip-installable package that simplifies command-line interfaces and handling of arguments. Read the documentation here: http://click.pocoo.org/5/.
+ - Usage: python getMito.py -i <input file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
+ - Example: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
+
+2.<b>getMito.ipynb</b> - Jupyter notebook (Python 3). Scroll down to the last cell in the notebook, click "Run", and type in the three inputs required sequentially in the white box below the cell: 
  - Input file (with extension; e.g. input.txt)
  - Output prefix (e.g. OUT)
  - Reference database (12S.ref.tsv or mitofish.ref.tsv)
-2. <b>getMito.sh</b> (shell) - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
- <br>This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below).
-
+ 
+2. <b>getMito.sh</b>  
+ - Dependency: Unix shell
+ - Usage: getMito.sh <inputfile> <output_prefix> <12S.list or mitofish.hit.list>. 
+ - This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below). 
 
 ## Reference files:
 Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the <i>Preparing MitoFish data</i>, <i>Preparing NCBI data</i> and <i>Linking MitoFish data with NCBI data</i> sections below:
