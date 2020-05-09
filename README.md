@@ -1,9 +1,9 @@
 # getMito
 #### Scripts to extract GenBank accession numbers of 12S rRNA gene sequences or mitochondrial sequences from a user-defined subspecies/species/genus list
 
-From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available. Please see overview below for a quick start guide. Refer to the [getMito wiki](https://github.com/shenjean/getMito/wiki) for more usage information.
+From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available.  Refer to the [getMito wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
-## Script usage and dependencies
+## Quick Start: script usage and dependencies
 There are three versions of the getMito main script:
 <br>
 1. <b>getMito.py</b>
