@@ -13,8 +13,8 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
 ## 4. Quick start
 ### 1. getMito
  - python getMito.py -i <input_file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
- - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
- - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
+    - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
+    - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
  - getMito.sh <input_file> <output_prefix> <reference_database>
  - getMito.ipynb: Click "Run" on last cell in notebook, and type each of the required three inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
 
