@@ -1,9 +1,9 @@
 # getMito & getTaxa
 ## 1. getMito
-From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing)), if available.  Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing)), if available.  Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information on these reference databases.
 
 ## 2. getTaxa
-getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using data from [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy). The *.txt output can then be used as input for getMito. Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1BClufjtAjbBas7Nu-4m-DsVeIGsYmFYP/view?usp=sharing). The *.txt output can then be used as input for getMito. Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information on the reference database.
 
 ## 3. Dependencies
 - <b>.py</b> scripts: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
@@ -11,19 +11,20 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
 - <b>getMito.sh</b>: Unix shell
 
 ## 4. Quick start
-### 1. getMito
+### I. getMito
  - python getMito.py -i <input_file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
     - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
     - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
  - getMito.sh <input_file> <output_prefix> <reference_database>
  - getMito.ipynb: Click "Run" on last cell in notebook, and type each of the required three inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
 
-### 2. getTaxa
+### II. getTaxa
  - python getTaxa.py -i <input_file> -o <output_prefix> 
  - getTaxa.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
  
 
 ## 5. Input files:
+### I. getMito
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
 ```
@@ -32,9 +33,20 @@ Histioteuthis corona corona
 Stomias boa boa
 Lampadena urophaos atlantica
 ```
-
+### II. getTaxa
+Tab-separated file with the fields: family/order/class/phylum name, input taxonomic level, and desired output taxonomic level. 
+Input is not case-sensitive, e.g.:
+```
+bathylagidae    family  species
+Onychoteuthidae family  species
+Anguilliformes  order   species
+Astronesthes    order   subspecies
+Melamphaes      order   subspecies
+Lepidosauria    class   subspecies
+```
 ## Output files:
-Output files are tab-separated with the following fields: Query, taxonomic level, GenBank accession number, gene description
+### I. getMito
+Tab-separated output file(s) with the following fields: Query, taxonomic level, GenBank accession number, gene description. 
 
 <br>Example output file <<i>OUT_species.hits.tsv</i>>:
 ```
@@ -43,12 +55,22 @@ Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S r
 Lampadena urophaos      species LC026535.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
 Lampadena urophaos      species LC026536.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
 Lampadena urophaos      species LC146002.1      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
-Alepisaurus ferox       species AF092181.1      Alepisaurus ferox 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
-Alepisaurus ferox       species LC021097.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:10875
-Alepisaurus ferox       species LC091793.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221156
-Alepisaurus ferox       species LC091794.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:117706
-Alepisaurus ferox       species LC091795.1      Alepisaurus ferox mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: UW:113571
-Anoplogaster cornuta    species AF092200.1      Anoplogaster cornuta 12S ribosomal RNA gene, mitochondrial gene for mitochondrial RNA, partial sequence
-Anoplogaster cornuta    species LC026573.1      Anoplogaster cornuta mitochondrial gene for 12S rRNA, partial sequence
 ```
+getMito output files can include <output_prefix>_genus.hits.tsv, <output_prefix>_species.hits.tsv, and <output_prefix>_subspecies.hits.tsv, depending on the taxonomic categories of hits produced.
 
+### II. getTaxa 
+<output_prefix>_taxa.tsv is tab-separated with the following fields: family/order/class/phylum name, input taxonomic level, genus/species/subspecies hit and output taxonomic level, e.g.:
+```
+Bathylagidae    family  Lipolagus ochotensis    species
+Bathylagidae    family  Bathylagus euryops      species
+Bathylagidae    family  Bathylagus stilbius     species
+Lepidosauria    class   Lacerta trilineata polylepidota subspecies
+Lepidosauria    class   Lacerta media wolterstorffi     subspecies
+Lepidosauria    class   Lacerta trilineata major        subspecies
+```
+<output_prefix>_taxa.txt is a plain-text file containing all hits and can be used as the inputfile for getMito, e.g.:
+```
+Lipolagus ochotensis
+Bathylagus euryops
+Bathylagus stilbius
+```
