@@ -5,7 +5,7 @@ From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts 
 ## 2. getTaxa
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using data from [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy). The *.txt output can then be used as input for getMito. Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
-## getMito Quick start: script usage and dependencies
+## getMito quick start: script usage and dependencies
 There are three versions of the getMito main script:
 <br>
 1. <b>getMito.py</b>
