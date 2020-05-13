@@ -10,7 +10,7 @@ from os import path
 @click.option('-o','--output_prefix', required=True, type=str, help='Output prefix (e.g. OUT)')
 
 def getMito(input_file,output_prefix):
-    """Script to fetch genus, species, or subspeices belonging to a specified list of taxa category (family,order,class,and phylum). The *.txt output can then be used for getMito.py"""
+    """Script to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/ phylum). The *.txt output can then be used for getMito.py"""
 
     filein=tuple(open(input_file,'r'))
     reference_file='eukaryota.tsv'
