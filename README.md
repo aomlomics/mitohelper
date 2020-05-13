@@ -6,9 +6,9 @@ From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts 
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using data from [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy). The *.txt output can then be used as input for getMito. Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 3. Dependencies
-- For .py scripts: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
-- For .ipynb scripts: Jupyter notebook with Python3
-- For getMito.sh: Unix shell
+- <b>.py</b> scripts: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
+- <b>.ipynb</b> scripts: [Jupyter notebook](https://jupyter.org/) with Python3
+- <b>getMito.sh</b>: Unix shell
 
 ## 4. Quick start
 ### 1. getMito
@@ -23,7 +23,7 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
  - getTaxa.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
  
 
-## getMito input file:
+## 5. Input filese:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
 ```
