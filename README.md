@@ -1,6 +1,6 @@
 # getMito & getTaxa
 ## 1. getMito
-From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: </b>mitofish.ref.tsv</b>), if available.  Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+From a user-provided list of genera/species/subspecies, <b>getMito</b> extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>) or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing)), if available.  Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 2. getTaxa
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using data from [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy). The *.txt output can then be used as input for getMito. Refer to the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
