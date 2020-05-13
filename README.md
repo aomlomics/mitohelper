@@ -23,7 +23,7 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
  - getTaxa.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
  
 
-## 5. Input filese:
+## 5. Input files:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
 e.g.
 ```
