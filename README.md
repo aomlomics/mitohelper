@@ -32,14 +32,8 @@ Histioteuthis corona corona
 Stomias boa boa
 Lampadena urophaos atlantica
 ```
-## getMito reference files:
-Reference files were prepared from downloaded <b>MitoFish (Apr 2 2020 update</b>) and <b>NCBI data (Apr 12 2020 version</b>). For data preparation pipeline, refer to <i>getMito.ipynb</i>, or the the [getMito wiki](https://github.com/shenjean/getMito/wiki). 
 
-A user can choose from two reference files:
-1. <b>12S.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for 12S rRNA genes. Available here.
-2. <b>mitofish.ref.tsv</b> - Tab-separated list of NCBI acession numbers and gene description for mitochondrial genes/genomes. Due to GitHub's file size limitation, this file (~502 MB) could not be uploaded here. Download from [here](https://drive.google.com/file/d/176hJjezjGTdGL3wYu4yM7nPmUV57Oiav/view?usp=sharing) instead.
-
-## getMito output files:
+## Output files:
 Output files are tab-separated with the following fields: Query, taxonomic level, GenBank accession number, gene description
 
 <br>Example output file <<i>OUT_species.hits.tsv</i>>:
