@@ -10,20 +10,18 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
 - For .ipynb scripts: Jupyter notebook with Python3
 - For getMito.sh: Unix shell
 
-## getMito quick start: script usage and dependencies
-There are three versions of the getMito main script:
-<br>
-1. <b>getMito.py</b>
- - Usage: python getMito.py -i <input file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
+## 4. Quick start
+1. getMito
+ - python getMito.py -i <input_file> -o <output_prefix> -r <reference database: 12S.ref.tsv or mitofish.ref.tsv>
  - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
  - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
+ - getMito.sh <input_file> <output_prefix> <reference_database>
+ - getMito.ipynb: Click "Run" on last cell in notebook, and type each of the required three inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
 
-2. <b>getMito.ipynb</b> 
- - Usage: scroll down to the last cell in the notebook, click "Run", and type in the three inputs required sequentially (input file, output prefix, and choice of reference database) in the white box below the cell
-
-3. <b>getMito.sh</b>  
- - Usage: getMito.sh <inputfile> <output_prefix> <12S.ref.tsv or mitofish.ref.tsv>. 
- - This is almost the same as the python script, with slight differences in the format of the output files and log (see <i>output files</i> and <i>output log</i> section below). 
+2. getTaxa
+ - python getTaxa.py -i <input_file> -o <output_prefix> 
+ - getTaxa.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
+ 
 
 ## getMito input file:
 Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
