@@ -108,7 +108,7 @@ def getMito(input_file,output_prefix,reference_file):
         print("No genus detected in input file.")
 
     if path.exists(species_path):
-        print ("Accession numbers of subspecies hits and description saved in %s" % species_path)
+        print ("Accession numbers of species hits and description saved in %s" % species_path)
     else:
         print("No species detected in input file.")
     
