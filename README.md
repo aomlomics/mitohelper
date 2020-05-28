@@ -26,8 +26,7 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
 
 ## 5. Input files:
 ### I. getMito
-Plain text file, with each line containing a genera, species, or subspecies. Test data are in the <b>fishdata</b> subfolder. <br>
-e.g.
+Plain text file, with each line containing a genera, species, or subspecies, e.g.:
 ```
 Histioteuthis celetaria celetaria
 Histioteuthis corona corona
