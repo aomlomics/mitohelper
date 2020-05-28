@@ -4,7 +4,7 @@
 From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1ms-dj_CEqAGWzKKabAOkLePa9ZJgtCnw/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1mTDxmwfCGd1aHFAz2dkRoA-KHflmZbHL/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 2. getTaxa
-getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1BClufjtAjbBas7Nu-4m-DsVeIGsYmFYP/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (subfamily/family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1BClufjtAjbBas7Nu-4m-DsVeIGsYmFYP/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 3. Dependencies
 - <b>.py</b> scripts: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
