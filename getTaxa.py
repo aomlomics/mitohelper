@@ -15,14 +15,19 @@ def getMito(input_file,output_prefix):
     filein=tuple(open(input_file,'r'))
     reference_file='eukaryota.tsv'
     i=0
-    taxlist=["phylum","class","order","family","genus","species","subspecies"]
+    taxlist=["phylum","class","order","family","genus","species","subfamily","subspecies"]
 
     # Throw an error message and exit if output file(s) already exist
+
     tsv=str(output_prefix+"_taxa.tsv")
     txt=str(output_prefix+"_taxa.txt")
 
     if path.exists(tsv) or path.exists(txt) :
         sys.exit("Error: Output file exists! Please rename output file and try again!")
+    
+    # For deduplication of txt output
+    seen=set()
+    seen.add("")
 
     # This function looks up input taxa category and returns output taxonomic names
 
@@ -41,8 +46,12 @@ def getMito(input_file,output_prefix):
 
                     if (hit!=""):
                         output1.write("%s\t%s\t%s\t%s\n" % (name.capitalize(),taxlist[level],hit,taxlist[searchlevel]))
-                        output2.write("%s\n" % hit)    
                         count +=1 
+
+                    if (hit not in seen):
+                        seen.add(hit)
+                        output2.write("%s\n" % hit)    
+
         output1.close()
         output2.close()
         print("Query #%d:%s\tQuery level:%s\tSearch level:%s\t# hits:%d" % (qcount,name.capitalize(),taxlist[level],taxlist[searchlevel],count))
@@ -64,6 +73,8 @@ def getMito(input_file,output_prefix):
             inlevel=2
         elif(line[1].casefold()=="Family".casefold()):
             inlevel=3
+        elif(line[1].casefold()=="Subfamily".casefold()):
+            inlevel=6
 
         outlevel=0  
         search=line[2].rsplit("\n")
@@ -72,11 +83,12 @@ def getMito(input_file,output_prefix):
         elif(search[0].casefold()=="Species".casefold()):
             outlevel=5
         elif(search[0].casefold()=="Subspecies".casefold()):
-            outlevel=6 
+            outlevel=7 
 
         lookup(name=intaxa,level=inlevel,searchlevel=outlevel)
 
         i += 1
+
 
 if __name__ == '__main__':
     getMito()
