@@ -1,4 +1,11 @@
 # getMito & getTaxa
+Reference file versions
+- mitofish.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
+- 12S.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
+- COI.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
+- eukaryota.tsv (NCBI taxonomy: May 28 update)
+
+
 ## Wiki page: https://github.com/shenjean/getMito/wiki
 ## 1. getMito
 From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1ms-dj_CEqAGWzKKabAOkLePa9ZJgtCnw/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1mTDxmwfCGd1aHFAz2dkRoA-KHflmZbHL/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
