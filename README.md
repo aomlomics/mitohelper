@@ -1,8 +1,8 @@
 # getMito & getTaxa
 Reference file versions
-- mitofish.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
-- 12S.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
-- COI.ref.tsv (NCBI nt: May 31 update; MitoFish: June 2 update)
+- mitofish.ref.tsv (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- COI.ref.tsv (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 - eukaryota.tsv (NCBI taxonomy: May 28 update)
 
 
