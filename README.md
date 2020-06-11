@@ -57,11 +57,11 @@ Tab-separated output file(s) with the following fields: Query, taxonomic level, 
 
 <br>Example output file <<i>OUT_species.hits.tsv</i>>:
 ```
-Stomias boa     species KX929921.1      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
-Stomias boa     species LC458106.1      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
-Lampadena urophaos      species LC026535.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
-Lampadena urophaos      species LC026536.1      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
-Lampadena urophaos      species LC146002.1      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
+Stomias boa     species KX929921      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
+Stomias boa     species LC458106      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
+Lampadena urophaos      species LC026535      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
+Lampadena urophaos      species LC026536      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
+Lampadena urophaos      species LC146002      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
 ```
 getMito output files can include <output_prefix>_genus.hits.tsv, <output_prefix>_species.hits.tsv, and <output_prefix>_subspecies.hits.tsv, depending on the taxonomic categories of hits produced.
 
