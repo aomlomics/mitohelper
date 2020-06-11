@@ -1,14 +1,14 @@
 # getMito & getTaxa
 Reference file versions
-- mitofish.ref.tsv (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- [mitofish.ref.tsv] (https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 - 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update)
-- COI.ref.tsv (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
-- eukaryota.tsv (NCBI taxonomy: May 28 update)
+- [COI.ref.tsv] (https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- [eukaryota.tsv] (https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing) (NCBI taxonomy: May 28 update)
 
 
 ## Wiki page: https://github.com/shenjean/getMito/wiki
 ## 1. getMito
-From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1pkLhhxq6SRBcCIOjwVnhDjd2r-BQhOif/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1mTDxmwfCGd1aHFAz2dkRoA-KHflmZbHL/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv] (https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 2. getTaxa
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (subfamily/family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
