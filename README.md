@@ -9,7 +9,7 @@ getSeq reference files:
 - [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing)
 - COI.pickle (coming soon)
 
-getTaxa refrence file:
+getTaxa reference file:
 - [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing) (NCBI taxonomy: May 28 update)
 
 
