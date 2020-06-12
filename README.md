@@ -1,7 +1,7 @@
 # getMito, getSeq & getTaxa
 getMito reference files:
 - [mitofish.ref.tsv](https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
-- 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update; available in this repository)
 - [COI.ref.tsv](https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 
 getSeq reference files (same database versions as above):
