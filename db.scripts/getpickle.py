@@ -1,8 +1,6 @@
 #!/usr/bin/python
 
 import pickle
-import re
-
 import sys
 import os.path
 from os import path
