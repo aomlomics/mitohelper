@@ -7,7 +7,7 @@ getMito reference files:
 getSeq reference files (same database versions as above):
 - [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing)
 - [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing)
-- COI.pickle (coming soon)
+- [COI.pickle](https://drive.google.com/file/d/1rfCJ_wnMzpvt5oLrL2mOZalZiqsTgp7f/view?usp=sharing)
 
 getTaxa reference file:
 - [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing) (NCBI taxonomy: May 28 update)
@@ -18,7 +18,7 @@ getTaxa reference file:
 From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 2. About getSeq
-getSeq is a companion script to getMito to fetch sequences from a getMito output file or a list of accession numbers. Sequence reference files are stored as python pickle dumps and include [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing), [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing), and COI.pickle. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+getSeq is a companion script to getMito to fetch sequences from a getMito output file or a list of accession numbers. Sequence reference files are stored as python pickle dumps and include [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing), [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing), and [COI.pickle](https://drive.google.com/file/d/1rfCJ_wnMzpvt5oLrL2mOZalZiqsTgp7f/view?usp=sharing). Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 3. About getTaxa
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (subfamily/family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
