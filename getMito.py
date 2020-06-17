@@ -56,45 +56,51 @@ def getMito(input_file,output_prefix,reference_file):
             squery=str(taxa[0]+" "+taxa[1])
 
         qcount = i+1
-        print ("=== Searching user query #%d ===" % qcount)
+        
+        if (len(fullquery)<2 or len(squery)<2 or len(gquery)<2):
+            print ("=== Searching user query #%d ===" % qcount)
+            print("ERROR: Query: <%s> has name(s) that is/are too short! Skipping search..." % fullquery)            
+
+        else:
+            print ("=== Searching user query #%d ===" % qcount)
 
     # These if statements determine the level of matching (subspecies/species/genus) for each UNIQUE query 
 
-        if (fullquery==gquery):
-            if fullquery not in seen:
-                matchme(query=fullquery,level="genus")
-                seen.add(fullquery)
-            else:
-                print("Duplicate warning: Genus %s has already been processed." % fullquery)
+            if (fullquery==gquery):
+                if fullquery not in seen:
+                    matchme(query=fullquery,level="genus")
+                    seen.add(fullquery)
+                else:
+                    print("Duplicate warning: Genus %s has already been processed." % fullquery)
 
-        elif (fullquery==squery):
-            if fullquery not in seen:
-                matchme(query=fullquery,level="species")
-                seen.add(fullquery)
-            else:
-                print("Duplicate query: Species %s has already been processed." % fullquery)
-            if gquery not in seen:
-                matchme(query=gquery,level="genus")
-                seen.add(gquery)
-            else:
-                print("Duplicate query: Genus %s has already been processed." % gquery)
+            elif (fullquery==squery):
+                if fullquery not in seen:
+                    matchme(query=fullquery,level="species")
+                    seen.add(fullquery)
+                else:
+                    print("Duplicate query: Species %s has already been processed." % fullquery)
+                if gquery not in seen:
+                    matchme(query=gquery,level="genus")
+                    seen.add(gquery)
+                else:
+                    print("Duplicate query: Genus %s has already been processed." % gquery)
 
-        else:
-            if fullquery not in seen:
-                matchme(query=fullquery,level="subspecies")
-                seen.add(fullquery)
             else:
-                print("Duplicate query: Species %s has already been processed." % fullquery)
-            if squery not in seen:
-                matchme(query=squery,level="species")
-                seen.add(squery)
-            else:
-                print("Duplicate query: Species %s has already been processed." % squery)
-            if gquery not in seen:
-                matchme(query=gquery,level="genus")
-                seen.add(gquery)
-            else:
-                print("Duplicate query: Genus %s has already been processed." % gquery)
+                if fullquery not in seen:
+                    matchme(query=fullquery,level="subspecies")
+                    seen.add(fullquery)
+                else:
+                    print("Duplicate query: Species %s has already been processed." % fullquery)
+                if squery not in seen:
+                    matchme(query=squery,level="species")
+                    seen.add(squery)
+                else:
+                    print("Duplicate query: Species %s has already been processed." % squery)
+                if gquery not in seen:
+                    matchme(query=gquery,level="genus")
+                    seen.add(gquery)
+                else:
+                    print("Duplicate query: Genus %s has already been processed." % gquery)
 
         i += 1
 
