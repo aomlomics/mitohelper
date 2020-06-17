@@ -1,8 +1,8 @@
 # getMito, getSeq & getTaxa
 getMito reference files:
-- [mitofish.ref.tsv](https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 - 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update; available in this repository)
-- [COI.ref.tsv](https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+- [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 
 getSeq reference files (same database versions as above):
 - [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing)
@@ -15,7 +15,7 @@ getTaxa reference file:
 
 ## Wiki page: https://github.com/shenjean/getMito/wiki
 ## 1. About getMito
-From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1q6RCVG3lKBVXuKBY-o8nwkpxJitaQ9kU/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1q7VucLiOnR5L13KxPwIgKGKb70z-ffSO/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
+From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 2. About getSeq
 getSeq is a companion script to getMito to fetch sequences from a getMito output file or a list of accession numbers. Sequence reference files are stored as python pickle dumps and include [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing), [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing), and [COI.pickle](https://drive.google.com/file/d/1rfCJ_wnMzpvt5oLrL2mOZalZiqsTgp7f/view?usp=sharing). Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
