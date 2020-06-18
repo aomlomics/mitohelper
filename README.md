@@ -24,9 +24,8 @@ getSeq is a companion script to getMito to fetch sequences from a getMito output
 getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (subfamily/family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
 
 ## 4. Dependencies
-- <b>.py</b> scripts: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
-- <b>.ipynb</b> scripts: [Jupyter notebook](https://jupyter.org/) with Python3
-- <b>getMito.sh</b>: Unix shell
+Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
+
 
 ## 5. Quick start
 ### I. getMito
@@ -34,19 +33,14 @@ getTaxa is a companion script to getMito to fetch genus/species/subspecies belon
     - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
     - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
     - Example 3: python getMito.py -i input.txt -o OUT -r COI.ref.tsv
- - getMito.sh <input_file> <output_prefix> <reference_database>
- - getMito.ipynb: Click "Run" on last cell in notebook, and type each of the required three inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
 
 ### II. getSeq
  - python getSeq.py -i <input_file> -t <input_file_type: getmito or plain> -r <reference file> -o <output_file> 
   - Example 1: python getSeq.py -i OUT_species.hits.tsv -t getmito -r 12S.pickle -o OUT.fasta
   - Example 2: python getSeq.py -i accession.txt -t plain -r mitofish.pickle -o output.fasta
- - getSeq.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
 
 ### III. getTaxa
  - python getTaxa.py -i <input_file> -o <output_prefix> 
- - getTaxa.ipynb: Click "Run" on last cell in notebook, and type each of the required two inputs sequentially in the whitebox below the cell, followed by the "Enter" key.
- 
 
 ## 5. Input files:
 ### I. getMito
