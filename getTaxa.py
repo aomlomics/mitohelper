@@ -8,14 +8,14 @@ from os import path
 @click.command()
 @click.option('-i','--input_file', required=True, type=str, help='Input query file (e.g. input.txt)')
 @click.option('-o','--output_prefix', required=True, type=str, help='Output prefix (e.g. OUT)')
+@click.option('-r','--reference_file', required=True, type=str, help='Database file: eukaryota.tsv')
 
-def getMito(input_file,output_prefix):
+def getMito(input_file, output_prefix, reference_file):
     """Script to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (family/order/class/ phylum). The *.txt output can then be used for getMito.py"""
 
     filein=tuple(open(input_file,'r'))
-    reference_file='eukaryota.tsv'
     i=0
-    taxlist=["phylum","class","order","family","genus","species","subfamily","subspecies"]
+    taxlist=["phylum", "class", "order", "family", "genus", "species", "subfamily", "subspecies"]
 
     # Throw an error message and exit if output file(s) already exist
 
