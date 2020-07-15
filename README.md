@@ -1,126 +1,67 @@
-# getMito, getSeq & getTaxa
+# getMito
+Wiki page: https://github.com/shenjean/getMito/wiki
+
+```
+Usage: getMito.py [OPTIONS]
+
+From a user-provided list of fish taxonomic names, getMito extracts available mitochondrial information (NCBI accession number, gene definition, NCBI taxonomic ID, taxonomic names, and sequence) and FASTA file (optional) at various taxonomic levels. The reference database is prepared from the MitoFish database and NCBI (Jul 2020 update).
+
+Options:
+  -i, --input_file TEXT           Input query file (e.g. input.txt) [required]
+  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
+  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv) [required]
+  -l, --tax_level [1|2|3|4|5|6|7] The taxonomic level of the search (e.g. 7 for speecies search, 6 for genus search)
+  --fasta / --no-fasta            Generate FASTA file containing sequences of all matching hits (default=FALSE)
+  --help                          Show this message and exit.
+
+```
+
 getMito reference files:
 - [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 - 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update; available in this repository)
 - [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 
-getSeq reference files (same database versions as above):
-- [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing)
-- [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing)
-- [COI.pickle](https://drive.google.com/file/d/1rfCJ_wnMzpvt5oLrL2mOZalZiqsTgp7f/view?usp=sharing)
 
-getTaxa reference file:
-- [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing) (NCBI taxonomy: May 28 update)
+Dependencies: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
 
-
-## Wiki page: https://github.com/shenjean/getMito/wiki
-## 1. About getMito
-From a user-provided list of genera/species/subspecies, getMito extracts the corresponding GenBank accession numbers of their 12S rRNA sequences (reference file: <b>12S.ref.tsv</b>), cytochrome c oxidase subunit I (reference file: [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing)), or mitochondrial sequences (reference file: [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing)), if available.  Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
-
-## 2. About getSeq
-getSeq is a companion script to getMito to fetch sequences from a getMito output file or a list of accession numbers. Sequence reference files are stored as python pickle dumps and include [mitofish.pickle](https://drive.google.com/file/d/1qI5gPZydpHj5Fa_aQRbE2hoqlWnBr-JX/view?usp=sharing), [12S.pickle](https://drive.google.com/file/d/1qEp2DmXWiSWVZC4I3cxdYaJhrHont2xR/view?usp=sharing), and [COI.pickle](https://drive.google.com/file/d/1rfCJ_wnMzpvt5oLrL2mOZalZiqsTgp7f/view?usp=sharing). Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
-
-## 3. About getTaxa
-getTaxa is a companion script to getMito to fetch genus/species/subspecies belonging to a specified list of taxonomic categories (subfamily/family/order/class/phylum) using eukaryotic data from NCBI Taxonomy (reference file: [eukaryota.tsv](https://drive.google.com/file/d/1n3OtSwu6hC1DWXo6TJhZb9KL-yMma3ck/view?usp=sharing). The *.txt output can then be used as input for getMito. Visit the [wiki](https://github.com/shenjean/getMito/wiki) for more information.
-
-## 4. Dependencies
-Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
-
-
-## 5. Quick start
-### I. getMito
- - python getMito.py -i <input_file> -o <output_prefix> -r <reference_file>
-    - Example 1: python getMito.py -i input.txt -o OUT -r 12S.ref.tsv
-    - Example 2: python getMito.py -i input.txt -o OUT -r mitofish.ref.tsv
-    - Example 3: python getMito.py -i input.txt -o OUT -r COI.ref.tsv
-
-### II. getSeq
- - python getSeq.py -i <input_file> -t <input_file_type: getmito or plain> -r <reference file> -o <output_file> 
-  - Example 1: python getSeq.py -i OUT_species.hits.tsv -t getmito -r 12S.pickle -o OUT.fasta
-  - Example 2: python getSeq.py -i accession.txt -t plain -r mitofish.pickle -o output.fasta
-
-### III. getTaxa
- - python getTaxa.py -i <input_file> -o <output_prefix> 
-
-## 5. Input files:
-### I. getMito
-Plain text file, with each line containing a genera, species, or subspecies, e.g.:
+Input file example: 
 ```
 Histioteuthis celetaria celetaria
 Histioteuthis corona corona
 Stomias boa boa
 Lampadena urophaos atlantica
 ```
-### II. getSeq
-Input can be any output file of getMito <i>(-t getmito)</i>:
+Screen output example:
 ```
-Stomias boa     species KX929921      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
-Stomias boa     species LC458106      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
-Lampadena urophaos      species LC026535      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
-Lampadena urophaos      species LC026536      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
-Lampadena urophaos      species LC146002      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
+=== Searching query #1: <aa> ===
+Search string:Myctophidae       Taxonomic level:L5      Hits:2746
+=== Searching query #2: <Abraliopsis pfefferi> ===
+=== Searching query #3: <#> ===
+ERROR: Query is too short (<2 characters)! Skipping search...
+=== Searching query #4: <Ahliesaurus berryi> ===
+Search string:Notosudidae       Taxonomic level:L5      Hits:55
 ```
-Input can also be a plain text file containing a list of accession numbers <i>(-t plain)</i>:
+Output file example:
 ```
-AY484973
-AY484974
-HM114425
-HM114426
-HM114427
-```
-
-
-### III. getTaxa
-Tab-separated file with the fields: family/order/class/phylum name, input taxonomic level, and desired output taxonomic level. 
-Input is not case-sensitive, e.g.:
-```
-bathylagidae    family  species
-Onychoteuthidae family  species
-Anguilliformes  order   species
-Astronesthes    order   subspecies
-Melamphaes      order   subspecies
-Lepidosauria    class   subspecies
-```
-## Output files:
-### I. getMito
-Tab-separated output file(s) with the following fields: Query, taxonomic level, GenBank accession number, gene description. 
-
-<br>Example output file <<i>OUT_species.hits.tsv</i>>:
-```
-Stomias boa     species KX929921      Stomias boa voucher ZMUC P2014774 12S ribosomal RNA gene, partial sequence; mitochondrial
-Stomias boa     species LC458106      Stomias boa mitochondrial gene for 12S rRNA, partial sequence
-Lampadena urophaos      species LC026535      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:220996
-Lampadena urophaos      species LC026536      Lampadena urophaos urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: HUMZ:221119
-Lampadena urophaos      species LC146002      Lampadena urophaos mitochondrial gene for 12S rRNA, partial sequence, specimen_voucher: CBM:ZF:14569
-```
-getMito output files can include <output_prefix>_genus.hits.tsv, <output_prefix>_species.hits.tsv, and <output_prefix>_subspecies.hits.tsv, depending on the taxonomic categories of hits produced.
-
-### II. getSeq
-Outputs standard fasta file with accession numbers in header lines:
-```
->AY484973
-AAAAAGCTTCAAACTGGGATTAGATACCCCACTATGCTTAGCCCTAAACCTCAACAGTTAAATCAACAAAACTGCTCGCCAGAACACTACGAGCCACAGCTTAAAACTCAAAGGACCTGGCGGTGCTTCATATCCCTCTAGAGGAGCCTGTTCTGTAAT
-CGATAAACCCCGATCAACCTCACCACCTCTTGCTCAGCCTATATACCGCCATCTTCAGCAAACCCTGATGAAGGCTACAAAGTAAGCGCAAGTACCCACGTAAAGACGTTAGGTCAAGGTGTAGCCCATGAGGTGGCAAGAAATGGGCTACATTTTCTA
-CCCCAGAAAACTACGATAGCCCTTATGAAACTTAAGGGTCGAAGGTGGATTTAGCAGTAAACTGAGAGTAGAGTGCTTAGTTGAACAGGGCCCTGAAGCGCGTACACACCGCCCCGTCACCCCTCTGCAGTCA
->AY484974
-AAAAAGCTTCAAACTGGGATTAGATACCCCACTATGCTTAGCCCTAAACCTCAACAGTTAAATCAACAAAACTGCTCGCCAGAACACTACGAGCCACAGCTTAAAACTCAAAGGACCTGGCGGTGCTTCATATCCCTCTAGAGGAGCCTGTTCTGTAAT
-CGATGAACCCCGATCAACCTCACCACCTCTTGCTCAGCCTATATACCGCCATCTTCAGCAAACCCTGATGAAGGCTACAAAGTAAGCGCAAGTACCCACGTAAAGACGTTAGGTCAAGGTGTAGCCCATGAGGTGGCAAGAAATGGGCTACATTTTCTA
-CCCCAGAAAACTACGATAGCCCTTATGAAACTTAAGGGTCGAAGGTGGATTTAGCAGTAAACTGAGAGTAGAGTGCTTAGTTGAACAGGGCCCTGAAGCGCGTACACACCGCCCGTCACCCTCTGCAGTCA
-```
-
-### III. getTaxa 
-<output_prefix>_taxa.tsv is tab-separated with the following fields: family/order/class/phylum name, input taxonomic level, genus/species/subspecies hit and output taxonomic level, e.g.:
-```
-Bathylagidae    family  Lipolagus ochotensis    species
-Bathylagidae    family  Bathylagus euryops      species
-Bathylagidae    family  Bathylagus stilbius     species
-Lepidosauria    class   Lacerta trilineata polylepidota subspecies
-Lepidosauria    class   Lacerta media wolterstorffi     subspecies
-Lepidosauria    class   Lacerta trilineata major        subspecies
-```
-<output_prefix>_taxa.txt is a plain-text file containing all hits and can be used as the inputfile for getMito, e.g.:
-```
-Lipolagus ochotensis
-Bathylagus euryops
-Bathylagus stilbius
+Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
+Myctophidae     AB024912        Hygophum benoiti mitochondrial gene for 16S rRNA, partial sequence      89987   Eukaryota       Chordata        Actinopter
+i       Myctophiformes  Myctophidae     Hygophum        Hygophum benoiti        TTTAGCAAGTACCCCCTGAGCAAAGAGCCCTTCAGTTCAGCACCCCGAAACTAGACGAGCTACTTCAAGACAGC
+CTGTTTAACAAACATGTAGGGCACACCCATATCTGTTGCAAAAGATTGGGAAGATCTTCAAGTAGAGGTGACAAGCCTACCGAGCCTAGTTATAGCTGGTTGTCTGAGAAATGAATATAAGTTCAGCCCCCTGATTTCCCCCATCAAGAGCACC
+AATGCCCTCAAAGATCAAACAAAAATCAAGGGAGTTAGCCAGAGGGGGTACAGCCCCTCTGGAAAAGGACACAACCTCAACGGAAGACCAAAGATCAAACCAACTAAGGAACTTTATTTTAGTGGGCCCGGAAGCAGCCACCTAAGAAGAAAGC
+GTTACAGCTCCCATATAGCTCCACCCCCTGATCTCGAACCCCTCTCTTCAATCTCCCCTCACTATCAGACCCTCCCACTAGTCCTGGGAAAGATTATGCTAAAATGAGTAATAAGAGGGTGCGCCCCTCTCCACCACACATGTATAAGTCGGAA
+CGGACCAACCGCCGATAACTAACGACCCCTGCAGAGAGTAGTGTACTGCCGCACAAATAGCAAGAAAGCCAAACACATAAAATCGTTAACCCAACACAGGTGTGTGCCCCCGGAAAGACTAAAACAAAGGGAAGGAACTCGGCAAACAAAAGCC
+TCGCCTGTTTACCAAAAACATCGCCTCTTGCAAAATTCACGAATAAGAGGTCCCGCCTGCCCAGTGACAGTGTTTAACGGCCGCGGTATTTTGACCGTGCAAAGGTAGCACAATAAATTGTCTCTTAATTGGAGAACGGTATGAATGGCATCAC
+GAGGGCTTAACTGTCTCCCCTCTAAAGTCAATGAAATTGATCTCCCCGTGCAGAAGCGGGGATACACTCGTAAGACGAGAAGACCCTATGGAGCTTTAGACATAAGCCAGCCCACGTCAAACGCCCCTAATAAAGGAAATGAACAAAATGGCCC
+CTGATGGTATGTCTTCGGTTGGGGCGACCACGGAGAAAGACAAAACCTCCACATGGACTGGGGCTACTACGCCCTAAAACACAGACCCACAGGTCAAATAAACAGTACATCTGACCATAAAAGAGCCGGCATAAGCCGATCAATGGACCAAGTT
+ACCCTAGGGATAACAGCGCAATCCTCTCAAAGAGACCATATCGACGAGGGGGTTTACGACCTCGATGTTGGATCAGGACATCCTAATGGTGCAGCCGCTATTAAGG
+Myctophidae     AB024913        Hygophum proximum mitochondrial gene for 16S rRNA, partial sequence     89988   Eukaryota       Chordata        Actinopter
+i       Myctophiformes  Myctophidae     Hygophum        Hygophum proximum       TACCTTTTGCATCATGATTTAGCAAGTACCCCTGAGCAAAGAGTACTTCAGTTCAGCGCCCCGAAACTAGACGA
+GCTACTTCAAGACAGCCTTTATTATATATACGTAGGGCACACCCGTCTCTGTTGCAAAAGAGTGGGAAGATCTTCAAGTAGGGGTGACAAGCCTACCGAGCCTAGTTTTAGCTGGTTGTCTGAGAAGTGTATATAAGTTCAGCCTCCTGATTTT
+ACCAGTCGAAAGCACCTATGCCCCCAAAGACCAAGTGAATTTCAGGAGAGTTAGTCAAGCGGGGTACAGCCCGCCTGAAAAAGGATACAACCTCTATGGAAGATTAAAGATCATACCAAATAAGGAACTTTACTTTAGTGGGCTTAAAAGCAGC
+CACCTACAAAGAAAGCGTTACAGCTCCTGTTTAATTTCACCCGCTAATACCGAACCCCGCCTCTTTAGTCCCCCACACTATCAGACCCTCCCACCCACCCTGGGAGAGATAATGCTAAAATGAGTAATAAGAGGGCGCGCCCCTCTCCAACACA
+CATGTTTATGTCGGAACGGACCCACCACCGACAATTAACGACCTCTACAGAGAGCAATGTACCACCGCACAAATAGCAAGAAAATCGAACACCTCATGCTCGTTAACCCAACACAGGTGTGTGACCCTGGAAAGACTAAAATAAAGGGAAGGAA
+CTCGGCAAACACAAGCCTCGCCTGTTTACCAAAAACATCGCCTCTTGCAATATTACGAATAAGAGGTCCCGCCTGCCCAGTGACGCTGTTTAACGGCCGCGGTATTTTGACCGTGCAAAGGTAGCGCAATAAATTGTCTCTTAATTGGAGACTA
+GTATGAATGGCACCACGAGGGCTTAACTGTCTCCCCTCTAAAGTCAATGAAATTGATCTCCCCGTGCAGAAGCGGGGATACGCTCGTAAGACGAGAAGACCCTTTGGAGCTTTAGACACAAGGGCAGCCCAGGTCAAACACCCCCAAAAGGAAC
+TGAACCCCATGAACCACTGCCAATCTGTCTTCGGTTGGGGCGACCACGGAGAAAAACAAAACCTCCACATGGAGTGGGGCCACTCGGCCCTAAAGAACAGACCCACAGGTCTAACCCGCAGAACATCTGACCACAAAGAACCGGCACAAGCCGC
+TCAATGGACCAAGTTACCCTAGGGATAACAGCGCAATCCCCTCAAAGAGACCTTATCGACGAGAGGGTTTACGACCTCGATGTTGGATCAGGACATCCTAATGGTGCAGCCGCTATTAAGGGTTCG
 ```
