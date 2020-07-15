@@ -14,15 +14,14 @@ Options:
   --fasta / --no-fasta            Generate FASTA file containing sequences of all matching hits (default=FALSE)
   --help                          Show this message and exit.
 
+Dependencies: Python3 and the conda- and pip-installable click package
 ```
 
-getMito reference files:
+getMito reference database files:
 - [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 - 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update; available in this repository)
 - [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
 
-
-Dependencies: Python3 and the conda- and pip-installable [click](http://click.pocoo.org/5/) package
 
 Input file example: 
 ```
