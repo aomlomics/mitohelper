@@ -26,17 +26,17 @@ Input file example:
 ```
 Abraliopsis pfefferi
 Ahliesaurus berryi
-Alepisaurus ferox
-Anotopterus pharao
+Alepisaurus FEROX
+anotopterus pharao
 ```
 Screen output example:
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
 === Searching query #2: <Ahliesaurus berryi> ===
 Search string:Notosudidae       Taxonomic level:L5      Hits:55
-=== Searching query #3: <Alepisaurus ferox> ===
+=== Searching query #3: <Alepisaurus FEROX> ===
 Search string:Alepisauridae     Taxonomic level:L5      Hits:79
-=== Searching query #4: <Anotopterus pharao> ===
+=== Searching query #4: <anotopterus pharao> ===
 DUPLICATE WARNING: Query has already been processed!
 ```
 Output file example (e.g. OUT_L5_hits.tsv):
