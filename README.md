@@ -19,10 +19,7 @@ Options:
 Dependencies: Python3 and the conda- and pip-installable click package
 ```
 
-getMito reference database files:
-- [mitofish.ref.tsv](https://drive.google.com/file/d/1uTKzADS2pqAxviz7vnwpgctlWoSrfLIn/view?usp=sharing) (630,974 records; NCBI nt: May 31 update; MitoFish: June 2 update)
-- 12S.ref.tsv (27,642 records; NCBI nt: May 31 update; MitoFish: June 2 update; available in this repository)
-- [COI.ref.tsv](https://drive.google.com/file/d/1u_wlS42nv_DLTy2m-qKSqJSkuRIdK9Kq/view?usp=sharing) (185,158 records; NCBI nt: May 31 update; MitoFish: June 2 update)
+Download getMito reference database file here: [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
 
 
 Input file example: 
