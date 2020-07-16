@@ -1,5 +1,7 @@
 # getMito
 Wiki page: https://github.com/shenjean/getMito/wiki
+<br>
+Download reference database file here: [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
 
 ```
 Usage: getMito.py [OPTIONS]
@@ -18,9 +20,6 @@ Options:
 
 Dependencies: Python3 and the conda- and pip-installable click package
 ```
-
-Download getMito reference database file here: [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
-
 
 Input file example: 
 ```
