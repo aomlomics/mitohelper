@@ -37,7 +37,7 @@ def getMito(input_file,output_prefix,database_file,tax_level,fasta):
 
 		with open(database_file, 'r') as db:
 			for line in db.readlines():
-				if query in line:
+				if query.casefold() in line.casefold():
 					count += 1
 					output.write("%s\t%s" % (query,line))
 					if fasta:
@@ -72,7 +72,7 @@ def getMito(input_file,output_prefix,database_file,tax_level,fasta):
 			
 			with open(database_file, 'r') as f:
 				for line in f.readlines():
-					if fullquery in line:
+					if fullquery.casefold() in line.casefold():
 						taxa=line.rsplit("\t")
 						levelname=str(taxa[column])
 
@@ -90,6 +90,8 @@ def getMito(input_file,output_prefix,database_file,tax_level,fasta):
 	print ("==== Run complete! ===")
 	print ("Accession numbers of subspecies hits and description saved in %s" % full_path)
 
+	if fasta:
+		print ("FASTA-formatted sequences saved in %s" % fasta_path)
 
 if __name__ == '__main__':
 	getMito()
