@@ -7,8 +7,8 @@ Visit the [Wiki page](https://github.com/shenjean/getMito/wiki) for workflow use
 ```
 Usage: getMito.py [OPTIONS]
 
-From a user-provided list of fish taxonomic names, getMito extracts available mitochondrial information and
-FASTA file (optional) at various taxonomic levels. 
+From a user-provided list of fish taxonomic names, getMito extracts 
+available mitochondrial information and FASTA file (optional) at user-specified taxonomic levels. 
 The reference database is prepared from the MitoFish database and NCBI (Jul 2020 update).
 
 Options:
