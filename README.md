@@ -13,7 +13,7 @@ Options:
   -i, --input_file TEXT           Input query file (e.g. input.txt) [required]
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
   -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv) [required]
-  -l, --tax_level [1|2|3|4|5|6|7] The taxonomic level of the search (e.g. 7 for speecies search, 6 for genus search)
+  -l, --tax_level [1|2|3|4|5|6|7] The taxonomic level of the search (e.g. 7 for species search, 6 for genus search)
   --fasta / --no-fasta            Generate FASTA file containing sequences of all matching hits (default=FALSE)
   --help                          Show this message and exit.
 
