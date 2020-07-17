@@ -1,6 +1,6 @@
 # getMito
 
-[Wiki page](https://github.com/shenjean/getMito/wiki) describes the creation of reference database files. 
+The [getMito Wiki page](https://github.com/shenjean/getMito/wiki) describes the creation of reference database files. 
 
 ```
 Usage: getMito.py [OPTIONS]
