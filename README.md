@@ -1,8 +1,6 @@
 # getMito
 
-Download reference database file here: [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
-<br>
-Visit the [Wiki page](https://github.com/shenjean/getMito/wiki) for workflow used in creating the reference database file. 
+[Wiki page](https://github.com/shenjean/getMito/wiki) describes the creation of reference database files. 
 
 ```
 Usage: getMito.py [OPTIONS]
@@ -21,6 +19,10 @@ Options:
 
 Dependencies: Python3 and the conda- and pip-installable click package
 ```
+Reference database files:
+- [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
+- [mitofish.12S.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1L2jFG9Sbc9rlOlH-hG5CN6MQEhcYqS34) (34,558 records)
+- [mitofish.COI.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1L5zHRAQXRWTjjmE5otRa5dTwqqmuqECL) (189,956 records)
 
 Input file example: 
 ```
