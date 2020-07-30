@@ -8,6 +8,6 @@ The processing workflow is described [here](https://github.com/shenjean/getMito/
 - getmito-Jul2020-12S-tax-derep-uniq.qza (in this folder)
 
 #### Dereplicated full-length 12S + SILVA (16S and 18S) rRNA gene sequences
-- [12S-16S-18S-seqs.qza](https://drive.google.com/uc?export=download&id=10NkSpgH-VHH88VGkpzsj9NdyPgh1mSlt) (external download)
+- [12S-16S-18S-seqs.qza](https://drive.google.com/uc?export=download&id=1Cr9HNEof8YUR09YenR_s76VWNm5H8KbF) (external download)
 - 12S-16S-18S-tax.qza (in this folder)
 
