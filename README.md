@@ -1,6 +1,6 @@
 # mitohelper
 
-The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the creation of reference database files. 
+The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the creation of reference database files and the algorithm behind `getalignment`.
 
 ### Dependencies
 - Tested on python 3.6.10
