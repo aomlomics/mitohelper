@@ -42,14 +42,14 @@ Options:
 
   --help                         Show this message and exit.
 ```
-Screen output
+Screen output example:
 ```
 ==== Run complete! ===
 blastn output saved in OUT.blastn.txt
 Table of alignment positions saved in OUT.alnpositions.tsv
 Plot of alignment positions saved in OUT.alnpositions.pdf
 ```
-TSV output - Reference sequence on top
+TSV output - Reference sequence on top:
 ```
 Accession       Start   End
 NC_002333.2:1020-1971   1       952
@@ -64,7 +64,7 @@ AB018228        150     305
 AB018229        150     305
 AB018230        150     305
 ```
-PDF output - Reference sequence on top
+PDF output - Reference sequence on top:
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
 
 #### getrecord
