@@ -4,7 +4,7 @@ The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the crea
 
 ### Dependencies
 - Tested on python 3.6.10
-- For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically blastn) must be installed and in the system path
+- For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
 ```
 Required python modules
 - click (v7.1.2)
