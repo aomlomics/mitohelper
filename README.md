@@ -1,23 +1,84 @@
 # getMito
 
-The [getMito Wiki page](https://github.com/shenjean/getMito/wiki) describes the creation of reference database files. 
+The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the creation of reference database files. 
 
+### Dependencies
+- Tested on python 3.6.10
+- For local blastn search, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download), specifically blastn, must be installed and in the system path
+
+Python modules
+- click (7.1.2)
+- matplotlib (3.3.0)
+- pandas (0.25.3)
+- seaborn (0.10.1)
 ```
-Usage: getMito.py [OPTIONS]
-
-From a user-provided list of fish taxonomic names, getMito extracts 
-available mitochondrial information and FASTA file (optional) at user-specified taxonomic levels. 
-The reference database is prepared from the MitoFish database and NCBI (Jul 2020 update).
+Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
 
 Options:
-  -i, --input_file TEXT           Input query file (e.g. input.txt) [required]
-  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
-  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv) [required]
-  -l, --tax_level [1|2|3|4|5|6|7] The taxonomic level of the search (e.g. 7 for species search, 6 for genus search)
-  --fasta / --no-fasta            Generate FASTA file containing sequences of all matching hits (default=FALSE)
-  --help                          Show this message and exit.
+  --help  Show this message and exit.
 
-Dependencies: Python3 and the conda- and pip-installable click package
+Commands:
+  getalignment  Pairwise align input sequences against a reference
+  getrecord     Retrieve fish mitochondrial records from taxa list
+```
+### getalignment
+```
+Usage: mitohelper.py getalignment [OPTIONS]
+
+  Pairwise align input sequences against a reference
+
+Options:
+  -i, --input_file TEXT          Input file: either blast output file or FASTA
+                                 file  [required]
+
+  -o, --output_prefix TEXT       Output prefix (e.g. OUT)  [required]
+  -r, --reference_sequence TEXT  FASTA file of a single reference sequence for
+                                 blastn searches. Required for --blast option.
+
+  --blast / --no-blast           Perform local blastn-short searches to
+                                 extract alignment positions (default=FALSE)
+
+  --help                         Show this message and exit.
+```
+Screen output
+```
+==== Run complete! ===
+blastn output saved in OUT.blastn.txt
+Table of alignment positions saved in OUT.alnpositions.tsv
+Plot of alignment positions saved in OUT.alnpositions.pdf
+```
+TSV output:
+<br>
+Reference sequence is always on top
+```
+Accession       Start   End
+NC_002333.2:1020-1971   1       952
+AB938103.1      249     348
+```
+
+#### getrecord
+```
+Usage: mitohelper.py getrecord [OPTIONS]
+
+  Retrieve fish mitochondrial records from taxa list
+
+Options:
+  -i, --input_file TEXT           Input query file (e.g. input.txt)
+                                  [required]
+
+  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
+  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv
+                                  [required]
+
+  -l, --tax_level [1|2|3|4|5|6|7]
+                                  The taxonomic level of the search (e.g 7 for
+                                  species, 6 for genus etc)
+
+  --fasta / --no-fasta            Generate FASTA file output containing
+                                  sequences of all matching hits
+                                  (default=FALSE)
+
+  --help                          Show this message and exit.
 ```
 Reference database files:
 - [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (639,987 records; Jul 2020 update)
