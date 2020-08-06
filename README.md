@@ -4,13 +4,15 @@ The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the crea
 
 ### Dependencies
 - Tested on python 3.6.10
-- For local blastn search, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download), specifically blastn, must be installed and in the system path
-
-Python modules
-- click (7.1.2)
-- matplotlib (3.3.0)
-- pandas (0.25.3)
-- seaborn (0.10.1)
+- For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically blastn) must be installed and in the system path
+```
+Required python modules
+- click (v7.1.2)
+- matplotlib (v3.3.0)
+- pandas (v0.25.3)
+- seaborn (v0.10.1)
+```
+### Usage
 ```
 Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
 
