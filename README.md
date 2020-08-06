@@ -53,9 +53,19 @@ TSV output - Reference sequence on top
 ```
 Accession       Start   End
 NC_002333.2:1020-1971   1       952
-AB938103.1      249     348
+AB006953        1       945
+AB015962        421     733
+AB016274        547     637
+AB018224        170     304
+AB018225        170     304
+AB018226        170     304
+AB018227        150     305
+AB018228        150     305
+AB018229        150     305
+AB018230        150     305
 ```
 PDF output - Reference sequence on top
+![Sample PDF output](https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png)
 
 #### getrecord
 ```
