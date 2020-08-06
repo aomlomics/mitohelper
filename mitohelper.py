@@ -24,7 +24,7 @@ def mitohelper():
 
 def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 	
-	"""Script to extract mitochondrial sequence records from a user-provided list of fish taxonomic names"""
+	"""Retrieve fish mitochondrial records from taxa list"""
 
 	# Throw various error messages and exit if tax_level is not set or output file(s) already exist
 
@@ -115,11 +115,11 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 @click.option('-i','--input_file', required=True, type=str, help='Input file: either blast output file or FASTA file')
 @click.option('-o','--output_prefix', required=True, type=str, help='Output prefix (e.g. OUT)')
 @click.option('-r','--reference_sequence', required=False, type=str, help='FASTA file of a single reference sequence for blastn searches. Required for --blast option.')
-@click.option('--blast/--no-blast', default=False, help='Perform blastn searches to extract alignment positions (default=FALSE)')
+@click.option('--blast/--no-blast', default=False, help='Perform local blastn-short searches to extract alignment positions (default=FALSE)')
 
 def getalignment(input_file,output_prefix,reference_sequence,blast):
 	
-	"""Script to extract and visualize alignment positions of input sequences compared to a single reference sequence"""
+	"""Pairwise align input sequences against a reference"""
 	
 	pdf_out=(output_prefix+".alnpositions.pdf")
 	tsv_out=(output_prefix+".alnpositions.tsv")
