@@ -49,14 +49,13 @@ blastn output saved in OUT.blastn.txt
 Table of alignment positions saved in OUT.alnpositions.tsv
 Plot of alignment positions saved in OUT.alnpositions.pdf
 ```
-TSV output:
-<br>
-Reference sequence is always on top
+TSV output - Reference sequence on top
 ```
 Accession       Start   End
 NC_002333.2:1020-1971   1       952
 AB938103.1      249     348
 ```
+PDF output - Reference sequence on top
 
 #### getrecord
 ```
