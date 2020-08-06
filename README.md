@@ -65,7 +65,7 @@ AB018229        150     305
 AB018230        150     305
 ```
 PDF output - Reference sequence on top
-![Sample PDF output](https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png)
+<img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
 
 #### getrecord
 ```
