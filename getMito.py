@@ -2,7 +2,6 @@
 
 import click
 import sys
-import os.path
 from os import path
 
 @click.command()
