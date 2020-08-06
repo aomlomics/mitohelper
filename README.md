@@ -1,4 +1,4 @@
-# getMito
+# mitohelper
 
 The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the creation of reference database files. 
 
