@@ -49,6 +49,20 @@ blastn output saved in OUT.blastn.txt
 Table of alignment positions saved in OUT.alnpositions.tsv
 Plot of alignment positions saved in OUT.alnpositions.pdf
 ```
+blastn input/output (```-outfmt7```):
+```
+# Query: AB938103
+# Database: User specified sequence set (Input: Zebrafish.12S.fasta)
+# Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 24 hits found
+AB938103	NC_002333.2:1020-1971	93.750	16	1	0	2	17	249	264	0.008	24.3
+AB938103	NC_002333.2:1020-1971	100.000	12	0	0	94	105	337	348	0.008	24.3
+AB938103	NC_002333.2:1020-1971	89.474	19	2	0	38	56	285	303	0.032	22.3
+AB938103	NC_002333.2:1020-1971	100.000	9	0	0	2	10	256	248	0.49	18.3
+AB938103	NC_002333.2:1020-1971	100.000	9	0	0	49	57	476	468	0.49	18.3
+AB938103	NC_002333.2:1020-1971	100.000	9	0	0	149	157	300	308	0.49	18.3
+AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
+```
 TSV output - Reference sequence on top:
 ```
 Accession       Start   End
