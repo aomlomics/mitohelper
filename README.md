@@ -106,9 +106,9 @@ Options:
   --help                          Show this message and exit.
 ```
 Reference database files:
-- [mitofish.all.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1C1vzqBpC7jsDfgyepbYS2vqDGBYf3rwY) (640,002 records; Aug 2020 update)
-- [mitofish.12S.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1CqG7AoShzAD2JwnoU_bRabuShOR1CvqO) (34,573 records)
-- [mitofish.COI.Jul2020.tsv](https://drive.google.com/uc?export=download&id=1CpuBkOEEweIKUVCZ6Ueq3JFyTvj4IVQy) (199,311 records)
+- [mitofish.all.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VKVOpi3g13fm2g6s0-OedKHpNQf4dDNy) (640,002 records; Aug 2020 update)
+- [mitofish.12S.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VCoWikJHsHJIrQdb5IZfNIoqtMjgC3Td) (34,573 records)
+- [mitofish.COI.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VQuOkz8wGEli0C9uIChpJ9pDydcOSvBA) (199,311 records)
 
 Input file example: 
 ```
