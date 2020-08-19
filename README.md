@@ -124,7 +124,7 @@ AB938103	NC_002333.2:1020-1971	100.000	9	0	0	49	57	476	468	0.49	18.3
 AB938103	NC_002333.2:1020-1971	100.000	9	0	0	149	157	300	308	0.49	18.3
 AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
 ```
-TSV output - Reference sequence on top:
+TSV output - Reference sequence will always be on top:
 ```
 Accession       Start   End
 NC_002333.2:1020-1971   1       952
@@ -139,5 +139,5 @@ AB018228        150     305
 AB018229        150     305
 AB018230        150     305
 ```
-PDF output - Reference sequence on top:
+PDF output - Reference sequence will always be on top:
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
