@@ -6,7 +6,8 @@
 - using pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the `QIIME-compatible` folder) 
 - knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/mitohelper/wiki/) for all the nitty gritty details!)
 
-### Dependencies
+Dependencies
+----
 
 > - Tested on python 3.6.10
 > - For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
@@ -19,7 +20,8 @@ Required python modules
 - seaborn (v0.10.1)
 ```
 
-### Usage
+Usage
+----
 
 ```
 Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
@@ -32,7 +34,8 @@ Commands:
   getrecord     Retrieve fish mitochondrial records from taxa list
 ```
 
-### getrecord
+getrecord
+----
 
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
@@ -95,6 +98,7 @@ GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGC
 ```
 
 ### getalignment
+----
 
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
