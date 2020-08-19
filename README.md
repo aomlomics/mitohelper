@@ -1,15 +1,15 @@
 # mitohelper
 
-<b>mitohelper</b> is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
-- finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (```getrecord``` command in ```mitohelper.py```)
-- finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (```getalignment``` command in ```mitohelper.py```)
-- downloading pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the ```QIIME-compatible``` folder) 
-- knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/mitohelper/wiki/) for all the nitty gritty details!)
+> <b>mitohelper</b> is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is > useful for researchers who are interested in:
+> - finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (`getrecord` command in `mitohelper.py`)
+> - finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (`getalignment` command in  `mitohelper.py`)
+> - using pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the `QIIME-compatible` folder) 
+> - knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/mitohelper/wiki/) for all the nitty gritty details!)
 
 ### Dependencies
 
-- Tested on python 3.6.10
-- For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
+> - Tested on python 3.6.10
+> - For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
 
 ```
 Required python modules
