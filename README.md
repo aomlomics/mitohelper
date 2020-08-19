@@ -29,7 +29,7 @@ Commands:
 ```
 
 
-#### getrecord
+### getrecord
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
 
