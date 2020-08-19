@@ -23,6 +23,8 @@ Required python modules
 Usage
 ----
 
+`mitohelper.py --help`
+
 ```
 Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
 
@@ -36,6 +38,8 @@ Commands:
 
 getrecord
 ----
+
+`mitohelper.py getrecord --help`
 
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
@@ -99,6 +103,8 @@ GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGC
 
 ### getalignment
 ----
+
+`mitohelper.py getalignment --help`
 
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
