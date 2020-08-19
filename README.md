@@ -7,8 +7,10 @@
 - knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/mitohelper/wiki/) for all the nitty gritty details!)
 
 ### Dependencies
+
 - Tested on python 3.6.10
 - For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
+
 ```
 Required python modules
 - click (v7.1.2)
@@ -16,7 +18,9 @@ Required python modules
 - pandas (v0.25.3)
 - seaborn (v0.10.1)
 ```
+
 ### Usage
+
 ```
 Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
 
@@ -28,8 +32,8 @@ Commands:
   getrecord     Retrieve fish mitochondrial records from taxa list
 ```
 
-
 ### getrecord
+
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
 
@@ -53,19 +57,23 @@ Options:
 
   --help                          Show this message and exit.
 ```
+
 Reference database files:
 - [mitofish.all.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VKVOpi3g13fm2g6s0-OedKHpNQf4dDNy) (640,002 records; Aug 2020 update)
 - [mitofish.12S.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VCoWikJHsHJIrQdb5IZfNIoqtMjgC3Td) (34,573 records)
 - [mitofish.COI.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VQuOkz8wGEli0C9uIChpJ9pDydcOSvBA) (199,311 records)
 
 Input file example: 
+
 ```
 Abraliopsis pfefferi
 Ahliesaurus berryi
 Alepisaurus FEROX
 anotopterus pharao
 ```
+
 Screen output example:
+
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
 === Searching query #2: <Ahliesaurus berryi> ===
@@ -75,7 +83,9 @@ Search string:Alepisauridae     Taxonomic level:L5      Hits:79
 === Searching query #4: <anotopterus pharao> ===
 DUPLICATE WARNING: Query has already been processed!
 ```
+
 Output file example (e.g. OUT_L5_hits.tsv):
+
 ```
 Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
 Notosudidae     AP004201        Scopelosaurus hoedti mitochondrial DNA, almost complete genome  172128  Eukaryota       Chordata        Actinopteri     Au
@@ -85,6 +95,7 @@ GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGC
 ```
 
 ### getalignment
+
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
 
@@ -103,13 +114,16 @@ Options:
 
   --help                         Show this message and exit.
 ```
+
 Screen output example:
+
 ```
 ==== Run complete! ===
 blastn output saved in OUT.blastn.txt
 Table of alignment positions saved in OUT.alnpositions.tsv
 Plot of alignment positions saved in OUT.alnpositions.pdf
 ```
+
 blastn input/output (```-outfmt7```):
 ```
 # Query: AB938103
@@ -124,6 +138,7 @@ AB938103	NC_002333.2:1020-1971	100.000	9	0	0	49	57	476	468	0.49	18.3
 AB938103	NC_002333.2:1020-1971	100.000	9	0	0	149	157	300	308	0.49	18.3
 AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
 ```
+
 TSV output - Reference sequence will always be on top:
 ```
 Accession       Start   End
@@ -139,5 +154,6 @@ AB018228        150     305
 AB018229        150     305
 AB018230        150     305
 ```
+
 PDF output - Reference sequence will always be on top:
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
