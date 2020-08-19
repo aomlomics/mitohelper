@@ -1,6 +1,10 @@
 # mitohelper
 
-The [Wiki page](https://github.com/shenjean/mitohelper/wiki/) describes the creation of reference database files and the algorithm behind `getalignment`.
+<b>mitohelper</b> is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
+- finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (getrecord command in ```mitohelper.py```)
+- finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (getalignment command in ```mitohelper.py```)
+- downloading pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the ```QIIME-compatible``` folder) 
+- knowing more about our reference database creation pipeline and `getalignment` algorithm (refer to the [Wiki page](https://github.com/shenjean/mitohelper/wiki/))
 
 ### Dependencies
 - Tested on python 3.6.10
@@ -23,6 +27,63 @@ Commands:
   getalignment  Pairwise align input sequences against a reference
   getrecord     Retrieve fish mitochondrial records from taxa list
 ```
+
+
+#### getrecord
+```
+Usage: mitohelper.py getrecord [OPTIONS]
+
+  Retrieve fish mitochondrial records from taxa list
+
+Options:
+  -i, --input_file TEXT           Input query file (e.g. input.txt)
+                                  [required]
+
+  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
+  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv
+                                  [required]
+
+  -l, --tax_level [1|2|3|4|5|6|7]
+                                  The taxonomic level of the search (e.g 7 for
+                                  species, 6 for genus etc)
+
+  --fasta / --no-fasta            Generate FASTA file output containing
+                                  sequences of all matching hits
+                                  (default=FALSE)
+
+  --help                          Show this message and exit.
+```
+Reference database files:
+- [mitofish.all.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VKVOpi3g13fm2g6s0-OedKHpNQf4dDNy) (640,002 records; Aug 2020 update)
+- [mitofish.12S.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VCoWikJHsHJIrQdb5IZfNIoqtMjgC3Td) (34,573 records)
+- [mitofish.COI.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VQuOkz8wGEli0C9uIChpJ9pDydcOSvBA) (199,311 records)
+
+Input file example: 
+```
+Abraliopsis pfefferi
+Ahliesaurus berryi
+Alepisaurus FEROX
+anotopterus pharao
+```
+Screen output example:
+```
+=== Searching query #1: <Abraliopsis pfefferi> ===
+=== Searching query #2: <Ahliesaurus berryi> ===
+Search string:Notosudidae       Taxonomic level:L5      Hits:55
+=== Searching query #3: <Alepisaurus FEROX> ===
+Search string:Alepisauridae     Taxonomic level:L5      Hits:79
+=== Searching query #4: <anotopterus pharao> ===
+DUPLICATE WARNING: Query has already been processed!
+```
+Output file example (e.g. OUT_L5_hits.tsv):
+```
+Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
+Notosudidae     AP004201        Scopelosaurus hoedti mitochondrial DNA, almost complete genome  172128  Eukaryota       Chordata        Actinopteri     Au
+lopiformes      Notosudidae     Scopelosaurus   Scopelosaurus hoedti    GCTAACGTAGTTTACTAAAAATATGACTCTGAAGAAGTTAAGACAGACCCTGAGAAGGCCTCGTAAGCACAAAAGCTTGGTC
+CTGGCTTTACTGTCATCTCAAACCGAGCTTACACATGCAAGTCTCCGCACCCCTGTGAGGATGCCCTCCACCCTCCTTTCCGGAAACGAGGAGCCGGTATCAGGCACGCCTATCAAGGCAGCCCAAAACACCTTGCTCAGCCACACCCCCAAGG
+GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGCCAGCCGCCGCGGT
+```
+
 ### getalignment
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
@@ -80,58 +141,3 @@ AB018230        150     305
 ```
 PDF output - Reference sequence on top:
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
-
-#### getrecord
-```
-Usage: mitohelper.py getrecord [OPTIONS]
-
-  Retrieve fish mitochondrial records from taxa list
-
-Options:
-  -i, --input_file TEXT           Input query file (e.g. input.txt)
-                                  [required]
-
-  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
-  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv
-                                  [required]
-
-  -l, --tax_level [1|2|3|4|5|6|7]
-                                  The taxonomic level of the search (e.g 7 for
-                                  species, 6 for genus etc)
-
-  --fasta / --no-fasta            Generate FASTA file output containing
-                                  sequences of all matching hits
-                                  (default=FALSE)
-
-  --help                          Show this message and exit.
-```
-Reference database files:
-- [mitofish.all.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VKVOpi3g13fm2g6s0-OedKHpNQf4dDNy) (640,002 records; Aug 2020 update)
-- [mitofish.12S.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VCoWikJHsHJIrQdb5IZfNIoqtMjgC3Td) (34,573 records)
-- [mitofish.COI.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VQuOkz8wGEli0C9uIChpJ9pDydcOSvBA) (199,311 records)
-
-Input file example: 
-```
-Abraliopsis pfefferi
-Ahliesaurus berryi
-Alepisaurus FEROX
-anotopterus pharao
-```
-Screen output example:
-```
-=== Searching query #1: <Abraliopsis pfefferi> ===
-=== Searching query #2: <Ahliesaurus berryi> ===
-Search string:Notosudidae       Taxonomic level:L5      Hits:55
-=== Searching query #3: <Alepisaurus FEROX> ===
-Search string:Alepisauridae     Taxonomic level:L5      Hits:79
-=== Searching query #4: <anotopterus pharao> ===
-DUPLICATE WARNING: Query has already been processed!
-```
-Output file example (e.g. OUT_L5_hits.tsv):
-```
-Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
-Notosudidae     AP004201        Scopelosaurus hoedti mitochondrial DNA, almost complete genome  172128  Eukaryota       Chordata        Actinopteri     Au
-lopiformes      Notosudidae     Scopelosaurus   Scopelosaurus hoedti    GCTAACGTAGTTTACTAAAAATATGACTCTGAAGAAGTTAAGACAGACCCTGAGAAGGCCTCGTAAGCACAAAAGCTTGGTC
-CTGGCTTTACTGTCATCTCAAACCGAGCTTACACATGCAAGTCTCCGCACCCCTGTGAGGATGCCCTCCACCCTCCTTTCCGGAAACGAGGAGCCGGTATCAGGCACGCCTATCAAGGCAGCCCAAAACACCTTGCTCAGCCACACCCCCAAGG
-GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGCCAGCCGCCGCGGT
-```
