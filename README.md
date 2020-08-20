@@ -89,11 +89,12 @@ Screen log:
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
 === Searching query #2: <Ahliesaurus berryi> ===
-Search string:Notosudidae       Taxonomic level:L5      Hits:55
+Search string:Ahliesaurus berryi	Taxonomic level:L7	Hits:2
 === Searching query #3: <Alepisaurus FEROX> ===
-Search string:Alepisauridae     Taxonomic level:L5      Hits:79
+Search string:Alepisaurus ferox	Taxonomic level:L7	Hits:32
 === Searching query #4: <anotopterus pharao> ===
-DUPLICATE WARNING: Query has already been processed!
+Search string:Anotopterus pharao	Taxonomic level:L7	Hits:9
+==== Run complete! ===
 ```
 
 Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`:
