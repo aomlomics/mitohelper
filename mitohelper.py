@@ -211,12 +211,24 @@ def getalignment(input_file,output_prefix,reference_sequence,blast):
 	positions=pd.melt(positions,"Accession",var_name="PositionType")
 	positions.columns=['Accession','PositionType','Position']
 
+	start = positions[positions["PositionType"] == "Start"]
+	end = positions[positions["PositionType"] == "End"]
+	
 	sns.set(style="white")
 
 	posplot=sns.pointplot(x="Position", y="Accession", hue="Accession", markers="", data=positions)
 	posplot.legend_.remove()
 	plt.title("Sequence alignment(s) relative to reference", size=14)
 
+	for xmin,ymin in enumerate(start['Position']):
+  		if(ymin==1):
+    			plt.text(-30,xmin,ymin,fontsize=8,bbox=dict(facecolor='lightgrey', alpha=0.5))
+  		if(ymin>1):
+    			plt.text(ymin-70,xmin,ymin,fontsize=8,bbox=dict(facecolor='lightgrey', alpha=0.5))
+
+	for xmax,ymax in enumerate(end['Position']):
+    		plt.text(ymax+30,xmax,ymax,fontsize=8,bbox=dict(facecolor='lightgrey', alpha=0.5))
+	
 	plt.savefig(pdf_out,bbox_inches='tight')
 
 	print ("==== Run complete! ===")
