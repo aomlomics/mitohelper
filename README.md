@@ -70,7 +70,12 @@ Options:
 > - [mitofish.12S.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VCoWikJHsHJIrQdb5IZfNIoqtMjgC3Td) (34,573 records)
 > - [mitofish.COI.Aug2020.tsv](https://drive.google.com/uc?export=download&id=1VQuOkz8wGEli0C9uIChpJ9pDydcOSvBA) (199,311 records)
 
-Input file example: 
+Usage example:
+```
+python mitohelper.py getrecord -i testdata/test.acc.txt -o testdata/getrecordOUT -d mitofish.all.Aug2020.tsv -l 7 --fasta
+```
+
+Input file example (`test.acc.txt` in folder `testdata`):
 
 ```
 Abraliopsis pfefferi
@@ -79,7 +84,7 @@ Alepisaurus FEROX
 anotopterus pharao
 ```
 
-Screen output example:
+Screen log:
 
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
@@ -91,14 +96,11 @@ Search string:Alepisauridae     Taxonomic level:L5      Hits:79
 DUPLICATE WARNING: Query has already been processed!
 ```
 
-Output file example (e.g. OUT_L5_hits.tsv):
+Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`:
 
 ```
 Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
-Notosudidae     AP004201        Scopelosaurus hoedti mitochondrial DNA, almost complete genome  172128  Eukaryota       Chordata        Actinopteri     Au
-lopiformes      Notosudidae     Scopelosaurus   Scopelosaurus hoedti    GCTAACGTAGTTTACTAAAAATATGACTCTGAAGAAGTTAAGACAGACCCTGAGAAGGCCTCGTAAGCACAAAAGCTTGGTC
-CTGGCTTTACTGTCATCTCAAACCGAGCTTACACATGCAAGTCTCCGCACCCCTGTGAGGATGCCCTCCACCCTCCTTTCCGGAAACGAGGAGCCGGTATCAGGCACGCCTATCAAGGCAGCCCAAAACACCTTGCTCAGCCACACCCCCAAGG
-GATTTCAGCAGTGATAGACATTAAGCAATAAGTGAAAACTTGACTTAGTTAAGGTTTAACAGGGCCGGTCAACCTCGTGCCAGCCGCCGCGGT
+Ahliesaurus berryi      EU366544        Ahliesaurus berryi voucher MCZ 161662 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial       509771  Eukaryota       Chordata        Actinopteri     Aulopiformes    Notosudidae     Ahliesaurus     Ahliesaurus berryi      GTGAACATGAGGTGGGCTCAGACGATAAAGCCTAGGAGGCCGATTGCTATCATAGCTCAGACCATGCCCATGTAGCCAAAGGGTTCTTTTTTCCCTGAATAGTAGGCTACGATGTGGGAGATCATACCAAAGCCGGGGAGAATAAGAATGTAGACCTCTGGGTGACCAAAGAATCAGAACAGGTGCTGGTAAAGGATGGGGTCTCCGCCCCCTGCCGGGTCAAAGAAGGTGGTGTTCAGGTTTCGGTCAGTTAGAAGTATTGTAATGCCTGCCGCTAGAACGGGGAGGGAGAGTAAAAGAAGGACGGCAGTAATAAGGACTGCTCAGACGAAGAGGGGAGTTTGGTACTGGGTGATGGCGGGGGGTTTTATGTTAATAATTGTTGTGATGAAGTTAATGGCACCCAGGATAGAGGAGATACCTGCCAGGTGGAGGGAGAAGATGGTTAGGTCTACGGAAGCTCCTGCATGGGCCAGGTTGCTGGCGAGAGGCGGATACACAGTTCATCCTGTTCCGGCCCCGGCTTCTACAGCGGAGGAGGCTAGGAGTAGAAGGAAGGATGGGGGGAGTAGTCAAAAGCTCATGTTGTTCATTCGGGGGAATGCCATGTCAGGCGCCCCGATCATAAGAGGGATAAGTCAGTTTCCGAACCCACCGATCATAATTGGTATTACCATGAAAAAAATTATTACGAAAGCGTGGGCAGTAACGATAACATTGTAAATCTGGTCGTCTCCTAAAAGGGCTCCGGGTTGGCTTAGCTCAGCTCGGATGAGAAGGCT
 ```
 
 ### getalignment
@@ -127,7 +129,9 @@ Options:
 
 Usage example:
 
-```python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast``` 
+```
+python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast
+``` 
 
 Screen output example:
 
@@ -174,4 +178,7 @@ AB018230        150     305
 ```
 
 Screen shot of PDF output (`alignmentOUT.alnpositions.pdf` in folder `testdata`):
+
+Reference sequence will always be on top 
+
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
