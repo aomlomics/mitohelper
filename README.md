@@ -125,6 +125,10 @@ Options:
   --help                         Show this message and exit.
 ```
 
+Usage example:
+
+```python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast``` 
+
 Screen output example:
 
 ```
@@ -134,7 +138,8 @@ Table of alignment positions saved in OUT.alnpositions.tsv
 Plot of alignment positions saved in OUT.alnpositions.pdf
 ```
 
-blastn input/output (```-outfmt7```):
+blastn `-outfmt 7` input/output (`alignmentOUT.blastn.txt` in folder `testdata`):
+
 ```
 # Query: AB938103
 # Database: User specified sequence set (Input: Zebrafish.12S.fasta)
@@ -149,7 +154,10 @@ AB938103	NC_002333.2:1020-1971	100.000	9	0	0	149	157	300	308	0.49	18.3
 AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
 ```
 
-TSV output - Reference sequence will always be on top:
+Tab-separated output (`alignmentOUT.alnpositions.tsv` in folder `testdata`):
+
+Reference sequence will always be on top 
+
 ```
 Accession       Start   End
 NC_002333.2:1020-1971   1       952
@@ -165,5 +173,5 @@ AB018229        150     305
 AB018230        150     305
 ```
 
-PDF output - Reference sequence will always be on top:
+Screen shot of PDF output (`alignmentOUT.alnpositions.pdf` in folder `testdata`):
 <img src="https://github.com/shenjean/mitohelper/blob/master/getalignment.sample.output.png" width="716" height="442">
