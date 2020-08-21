@@ -187,4 +187,4 @@ Screen shot of PDF output (`alignmentOUT.alnpositions.pdf` in folder `testdata`)
 
 Reference sequence will always be on top 
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/alignmentOUT.alnpositions.jpg" width="716" height="442">
+<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/alignmentOUT.alnpositions.png" width="716" height="442">
