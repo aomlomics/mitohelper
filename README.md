@@ -82,7 +82,7 @@ Abraliopsis pfefferi
 Ahliesaurus berryi
 Alepisaurus FEROX
 anotopterus pharao
-abraliopsis pfefferi
+AHLIESAURUS BERRYI
 ```
 
 Screen log:
@@ -95,7 +95,11 @@ Search string:Ahliesaurus berryi	Taxonomic level:L7	Hits:2
 Search string:Alepisaurus ferox	Taxonomic level:L7	Hits:32
 === Searching query #4: <anotopterus pharao> ===
 Search string:Anotopterus pharao	Taxonomic level:L7	Hits:9
+=== Searching query #5: <AHLIESAURUS BERRYI> ===
+DUPLICATE WARNING: Query has already been processed!
 ==== Run complete! ===
+Accession numbers of subspecies hits and description saved in testdata/getrecordOUT_L7_hits.tsv
+FASTA-formatted sequences saved in testdata/getrecordOUT_L7.fasta
 ```
 
 Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`:
