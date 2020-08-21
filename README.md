@@ -72,16 +72,17 @@ Options:
 
 Usage example:
 ```
-python mitohelper.py getrecord -i testdata/test.acc.txt -o testdata/getrecordOUT -d mitofish.all.Aug2020.tsv -l 7 --fasta
+python mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Aug2020.tsv -l 7 --fasta
 ```
 
-Input file example (`test.acc.txt` in folder `testdata`):
+Input file example (`species.query.txt` in folder `testdata`):
 
 ```
 Abraliopsis pfefferi
 Ahliesaurus berryi
 Alepisaurus FEROX
 anotopterus pharao
+abraliopsis pfefferi
 ```
 
 Screen log:
