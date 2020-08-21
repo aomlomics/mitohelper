@@ -93,11 +93,11 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 						levelname=str(taxa[column])
 
 						# Check for query duplicates at the specified taxonomic level, skip search if query is duplicated						
-						if levelname not in seen:
-							seen.add(levelname)	
+						if levelname.lower() not in seen:
+							seen.add(levelname.lower())	
 							matchme(query=levelname)
 							break
-						else:
+						if levelname.lower() in seen:
 							print("DUPLICATE WARNING: Query has already been processed!")
 							break
 				i += 1
