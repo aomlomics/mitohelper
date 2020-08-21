@@ -1,6 +1,7 @@
 # mitohelper
 
-<b>mitohelper</b> is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
+**mitohelper** is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
+
 - finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (`getrecord` command in `mitohelper.py`)
 - finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (`getalignment` command in  `mitohelper.py`)
 - using pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the `QIIME-compatible` folder) 
@@ -102,7 +103,7 @@ Accession numbers of subspecies hits and description saved in testdata/getrecord
 FASTA-formatted sequences saved in testdata/getrecordOUT_L7.fasta
 ```
 
-Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`:
+Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`):
 
 ```
 Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
@@ -137,7 +138,7 @@ Usage example:
 
 ```
 python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast
-``` 
+```
 
 Screen log:
 
@@ -166,7 +167,7 @@ AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
 
 Tab-separated output (`alignmentOUT.alnpositions.tsv` in folder `testdata`):
 
-Reference sequence will always be on top 
+*Reference sequence will always be on top.*
 
 ```
 Accession       Start   End
@@ -185,6 +186,6 @@ AB018230        150     305
 
 Screen shot of PDF output (`alignmentOUT.alnpositions.pdf` in folder `testdata`):
 
-Reference sequence will always be on top 
+*Reference sequence will always be on top.*
 
 <img src="https://github.com/shenjean/mitohelper/blob/master/testdata/alignmentOUT.alnpositions.png" width="716" height="442">
