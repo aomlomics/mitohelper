@@ -219,6 +219,7 @@ def getalignment(input_file,output_prefix,reference_sequence,blast):
 	posplot=sns.pointplot(x="Position", y="Accession", hue="Accession", markers="", data=positions)
 	posplot.legend_.remove()
 	plt.title("Sequence alignment(s) relative to reference", size=14)
+	plt.grid(linestyle=":")
 
 	for xmin,ymin in enumerate(start['Position']):
   		if(ymin==1):
