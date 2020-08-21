@@ -139,7 +139,7 @@ Usage example:
 python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast
 ``` 
 
-Screen output example:
+Screen log:
 
 ```
 ==== Run complete! ===
