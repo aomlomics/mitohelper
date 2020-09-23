@@ -161,7 +161,7 @@ def getalignment(input_file,output_prefix,reference_sequence,blastn_task):
 
 					if (i>0):
 						if (query is not None):
-							outfile.write("%s\t%d\t%d\t%d\n" % (query,startmin,endmax,score))
+							outfile.write("%s\t%d\t%d\t%d\n" % (query,startmin,endmax,lastscore))
 					if (i>=0):
 						seen.add(acc)	
 						query=acc
