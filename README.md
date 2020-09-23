@@ -52,7 +52,7 @@ Options:
                                   [required]
 
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
-  -d, --database_file TEXT        Database file (e.g. mitofish.all.Jul2020.tsv
+  -d, --database_file TEXT        Database file (e.g. mitofish.all.Sep2020.tsv
                                   [required]
 
   -l, --tax_level [1|2|3|4|5|6|7]
@@ -121,70 +121,67 @@ Usage: mitohelper.py getalignment [OPTIONS]
   Pairwise align input sequences against a reference
 
 Options:
-  -i, --input_file TEXT          Input file: either blast output file or FASTA
-                                 file  [required]
+  -i, --input_file TEXT           Input file: either blastn output file or
+                                  FASTA file  [required]
+  -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
+  -r, --reference_sequence TEXT   FASTA file of a single reference sequence
+                                  for blastn searches. Required for --blast
+                                  option.
+  --blastn-task [blastn|blastn-short|megablast|dc-megablast|none]
+                                  Choice of blastn task for local similarity
+                                  searches used to extract alignment positions
+                                  [default:blastn-short]  [required]
+  --help                          Show this message and exit.
 
-  -o, --output_prefix TEXT       Output prefix (e.g. OUT)  [required]
-  -r, --reference_sequence TEXT  FASTA file of a single reference sequence for
-                                 blastn searches. Required for --blast option.
-
-  --blast / --no-blast           Perform local blastn-short searches to
-                                 extract alignment positions (default=FALSE)
-
-  --help                         Show this message and exit.
 ```
 
 Usage example:
 
 ```
-python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/alignmentOUT -r testdata/Zebrafish.12S.ref.fasta --blast
+python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
 ```
 
 Screen log:
 
 ```
 ==== Run complete! ===
-blastn output saved in OUT.blastn.txt
-Table of alignment positions saved in OUT.alnpositions.tsv
-Plot of alignment positions saved in OUT.alnpositions.pdf
+blastn output saved in blastnALN.blastn.txt
+Table of alignment positions saved in blastnALN.alnpositions.tsv
+Plot of alignment positions saved in blastnALN.alnpositions.pdf
 ```
 
 blastn `-outfmt 7` input/output (`alignmentOUT.blastn.txt` in folder `testdata`):
 
 ```
-# Query: AB938103
-# Database: User specified sequence set (Input: Zebrafish.12S.fasta)
+# BLASTN 2.9.0+
+# Query: NC_002333.2:1020-1971 Danio rerio mitochondrion, complete genome
+# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
-# 24 hits found
-AB938103	NC_002333.2:1020-1971	93.750	16	1	0	2	17	249	264	0.008	24.3
-AB938103	NC_002333.2:1020-1971	100.000	12	0	0	94	105	337	348	0.008	24.3
-AB938103	NC_002333.2:1020-1971	89.474	19	2	0	38	56	285	303	0.032	22.3
-AB938103	NC_002333.2:1020-1971	100.000	9	0	0	2	10	256	248	0.49	18.3
-AB938103	NC_002333.2:1020-1971	100.000	9	0	0	49	57	476	468	0.49	18.3
-AB938103	NC_002333.2:1020-1971	100.000	9	0	0	149	157	300	308	0.49	18.3
-AB938103	NC_002333.2:1020-1971	100.000	9	0	0	64	72	332	340	0.49	18.3
+# 1 hits found
+NC_002333.2:1020-1971   NC_002333.2:1020-1971   100.000 952     0       0       1       952     1       952     0.0     1718
 ```
 
-Tab-separated output (`alignmentOUT.alnpositions.tsv` in folder `testdata`):
+Tab-separated output (`blastnALN.alnpositions.tsv` in folder `testdata`):
 
 *Reference sequence will always be on top.*
 
 ```
-Accession       Start   End
-NC_002333.2:1020-1971   1       952
-AB006953        1       945
-AB015962        421     733
-AB016274        547     637
-AB018224        170     304
-AB018225        170     304
-AB018226        170     304
-AB018227        150     305
-AB018228        150     305
-AB018229        150     305
-AB018230        150     305
+Accession       Start   End     Bit_Score
+NC_002333.2:1020-1971   1       952     37
+AB938103        249     348     1099
+AB006953        1       945     484
+AB015962        102     945     550
+AB016274        17      945     473
+AB018224        2       825     471
+AB018225        2       804     491
+AB018226        1       825     520
+AB018227        1       804     505
+AB018228        1       825     506
+AB018229        1       804     513
+AB018230        1       825     513
 ```
 
-Screen shot of PDF output (`alignmentOUT.alnpositions.pdf` in folder `testdata`):
+Screen shot of PDF output (`blastnALN.alnpositions.pdf` in folder `testdata`):
 
 *Reference sequence will always be on top.*
 
