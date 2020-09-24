@@ -112,6 +112,9 @@ Ahliesaurus berryi      EU366544        Ahliesaurus berryi voucher MCZ 161662 cy
 
 getalignment
 ----
+Graphical output with reference sequence on top:
+
+<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
 `mitohelper.py getalignment --help`
 
@@ -181,8 +184,6 @@ AB018229        1       804     513
 AB018230        1       825     513
 ```
 
-Graphical output (example `blastnALN.alnpositions.pdf` in folder `testdata`):
+Graphical output (`blastnALN.alnpositions.pdf` in folder `testdata`):
 
-*Reference sequence will always be on top.*
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="672.5" height="401.5">
