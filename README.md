@@ -181,8 +181,8 @@ AB018229        1       804     513
 AB018230        1       825     513
 ```
 
-Screen shot of PDF output (`blastnALN.alnpositions.pdf` in folder `testdata`):
+Graphical output (example `blastnALN.alnpositions.pdf` in folder `testdata`):
 
 *Reference sequence will always be on top.*
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_output.PNG" width="716" height="442">
+<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="716" height="442">
