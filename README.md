@@ -185,4 +185,4 @@ Screen shot of PDF output (`blastnALN.alnpositions.pdf` in folder `testdata`):
 
 *Reference sequence will always be on top.*
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/alignmentOUT.alnpositions.png" width="716" height="442">
+<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_output.PNG" width="716" height="442">
