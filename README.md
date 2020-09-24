@@ -185,4 +185,4 @@ Graphical output (example `blastnALN.alnpositions.pdf` in folder `testdata`):
 
 *Reference sequence will always be on top.*
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="716" height="442">
+<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="672.5" height="401.5">
