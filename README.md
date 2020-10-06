@@ -67,9 +67,9 @@ Options:
 ```
 
 > Reference database files:
-> - [mitofish.all.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1lDnHZk4RE0TzprEmegmGF-Kq_JyymZ2a) (650,841 records; Oct 2020 update)
-> - [mitofish.12S.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1l9l5XxWJ-jAzHMEUILb_ALqFbJv03Vul) (34,715 records)
-> - [mitofish.COI.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1lGhFDTKdyJdPdVJkNLdxy-5xCw-PJd7_) (203,070 records)
+> - [mitofish.all.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vBPouxanNWYvmp7sWsl9ZH09IE0GflL-) (650,841 records; Oct 2020 update)
+> - [mitofish.12S.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1v4Ngxo82_CDz5vqUAjAHysg_gwzKXnoA) (34,715 records)
+> - [mitofish.COI.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1v4XxK9mnple64aHS-cvDY5OOxem9cl6p) (203,070 records)
 
 Usage example:
 ```
