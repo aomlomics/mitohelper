@@ -67,7 +67,7 @@ Options:
 ```
 
 > Reference database files:
-> - [mitofish.all.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vBPouxanNWYvmp7sWsl9ZH09IE0GflL-) (650,841 records; Oct 2020 update)
+> - [mitofish.all.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vgjXvyTglGMCrvNmylFDbqnlNXKKaNME) (650,841 records; Oct 2020 update)
 > - [mitofish.12S.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vdECwfTJLxZ0ewfyeeeMDBXkdzlsl0MO) (34,729 records)
 > - [mitofish.COI.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1veoDSI7sZoK6YoTLGgYIyK1N2YcreX47) (204,804 records)
 
