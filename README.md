@@ -15,10 +15,10 @@ Dependencies
 
 ```
 Required python modules
-- click (v7.1.2)
-- matplotlib (v3.3.0)
-- pandas (v0.25.3)
-- seaborn (v0.10.1)
+- click (v7.1.2) - install via pip
+- matplotlib (v3.3.0) - install via pip/conda
+- pandas (v0.25.3) - install via pip/conda
+- seaborn (v0.10.1) -install via pip/conda
 ```
 
 Usage
