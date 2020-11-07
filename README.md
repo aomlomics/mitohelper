@@ -14,7 +14,7 @@ Dependencies
 > - For local blastn searches, NCBI [BLAST+ executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (specifically `blastn`) must be installed and in the system path
 
 
-Required python modules
+Required python modules:
 - click (v7.1.2) - `pip install click` or `conda install -c conda-forge click=7.1.2`
 - matplotlib (v3.3.0) - `pip install matplotlib` or `conda install matplotlib=3.3.0`
 - pandas (v0.25.3) - `pip install pandas` or `conda install pandas=0.25.3`
