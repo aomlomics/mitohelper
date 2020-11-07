@@ -67,13 +67,13 @@ Options:
 ```
 
 > Reference database files:
-> - [mitofish.all.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vgjXvyTglGMCrvNmylFDbqnlNXKKaNME) (650,841 records; Oct 2020 update)
-> - [mitofish.12S.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vveJY0OhbQfqxGgUER7tgXK4SXgJgX1F) (34,730 records)
-> - [mitofish.COI.Oct2020.tsv](https://drive.google.com/uc?export=download&id=1vxx2O0s4neAfdnI0hvKEuggjdPWrhWof) (208,244 records)
+> - [mitofish.all.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vgjXvyTglGMCrvNmylFDbqnlNXKKaNME) (660,961 records; Nov 2020 update)
+> - [mitofish.12S.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vveJY0OhbQfqxGgUER7tgXK4SXgJgX1F) (34,730 records)
+> - [mitofish.COI.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vxx2O0s4neAfdnI0hvKEuggjdPWrhWof) (208,244 records)
 
 Usage example:
 ```
-python mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Aug2020.tsv -l 7 --fasta
+python mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Nov2020.tsv -l 7 --fasta
 ```
 
 Input file example (`species.query.txt` in folder `testdata`):
