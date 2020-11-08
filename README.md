@@ -1,11 +1,11 @@
-# mitohelper
+# Mitohelper
 
-**mitohelper** is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
+**Mitohelper** is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
 
 - finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (`getrecord` command in `mitohelper.py`)
 - finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (`getalignment` command in  `mitohelper.py`)
 - using pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the `QIIME-compatible` folder) 
-- knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/mitohelper/wiki/) for all the nitty gritty details!)
+- knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/shenjean/Mitohelper/wiki/) for all the nitty gritty details!)
 
 Dependencies
 ----
@@ -114,7 +114,7 @@ getalignment
 ----
 Graphical output with reference sequence on top:
 
-<img src="https://github.com/shenjean/mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
+<img src="https://github.com/shenjean/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
 `mitohelper.py getalignment --help`
 
