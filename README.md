@@ -66,10 +66,10 @@ Options:
   --help                          Show this message and exit.
 ```
 
-> Reference database files:
-> - [mitofish.all.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vgjXvyTglGMCrvNmylFDbqnlNXKKaNME) (660,961 records; Nov 2020 update)
-> - [mitofish.12S.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vveJY0OhbQfqxGgUER7tgXK4SXgJgX1F) (37,101 records)
-> - [mitofish.COI.Nov2020.tsv](https://drive.google.com/uc?export=download&id=1vxx2O0s4neAfdnI0hvKEuggjdPWrhWof) (221,940 records)
+> Reference database files are available for download from http://doi.org/10.5281/zenodo.4257040
+> - mitofish.all.Nov2020.tsv (660,961 records; Nov 2020 update)
+> - mitofish.12S.Nov2020.tsv (37,101 records)
+> - mitofish.COI.Nov2020.tsv (221,940 records)
 
 Usage example:
 ```
