@@ -1,6 +1,6 @@
 # Mitohelper
 
-**Mitohelper** is a repository built to facilitate experimental design, alignment visualization, and reference sequence analysis in fish eDNA studies. It is useful for researchers who are interested in:
+**Mitohelper** is a Python-based mitochondrial reference sequence analysis tool for fish eDNA studies. It is useful for researchers interested in:
 
 - finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (`getrecord` command in `mitohelper.py`)
 - finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (`getalignment` command in  `mitohelper.py`)
