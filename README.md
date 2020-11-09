@@ -52,7 +52,7 @@ Options:
                                   [required]
 
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
-  -d, --database_file TEXT        Database file (e.g. mitofish.all.Sep2020.tsv
+  -d, --database_file TEXT        Database file (e.g. mitofish.all.Nov2020.tsv
                                   [required]
 
   -l, --tax_level [1|2|3|4|5|6|7]
