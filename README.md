@@ -34,22 +34,6 @@ If running in a conda environment or using other non-default versions of Python,
 `python mitohelper.py --help`
 
 ```
-Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
-
-Options:
-  --help  Show this message and exit.
-
-Commands:
-  getalignment  Pairwise align input sequences against a reference
-  getrecord     Retrieve fish mitochondrial records from taxa list
-```
-
-getrecord
-----
-
-`mitohelper.py getrecord --help`
-
-```
 Usage: mitohelper.py getrecord [OPTIONS]
 
   Retrieve fish mitochondrial records from taxa list
@@ -59,8 +43,8 @@ Options:
                                   [required]
 
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
-  -d, --database_file TEXT        Database file (e.g. mitofish.all.Nov2020.tsv
-                                  [required]
+  -d, --database_file TEXT        Database file (e.g.
+                                  mitofish.all.Nov2020.tsv)  [required]
 
   -l, --tax_level [1|2|3|4|5|6|7]
                                   The taxonomic level of the search (e.g 7 for
@@ -70,7 +54,11 @@ Options:
                                   sequences of all matching hits
                                   (default=FALSE)
 
-  --help                          Show this message and exit.
+  --taxout / --no-tax             Generate taxonomy file output for all
+                                  matching hits (default=FALSE)
+
+  --help                          Show this message and exit
+
 ```
 
 > Reference database files are available for download from http://doi.org/10.5281/zenodo.4257040
@@ -123,7 +111,7 @@ Graphical output with reference sequence on top:
 
 <img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
-`mitohelper.py getalignment --help`
+`python mitohelper.py getalignment --help`
 
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
