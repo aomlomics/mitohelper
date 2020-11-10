@@ -63,7 +63,7 @@ Options:
 
 > Reference database files are available for download from http://doi.org/10.5281/zenodo.4257040
 > - mitofish.all.Nov2020.tsv (660,961 records; Nov 2020 update)
-> - mitofish.12S.Nov2020.tsv (37,101 records)
+> - mitofish.12S.Nov2020.tsv (37,102 records)
 > - mitofish.COI.Nov2020.tsv (221,940 records)
 
 Usage example:
