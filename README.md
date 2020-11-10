@@ -94,8 +94,9 @@ Search string:Anotopterus pharao	Taxonomic level:L7	Hits:9
 === Searching query #5: <AHLIESAURUS BERRYI> ===
 DUPLICATE WARNING: Query has already been processed!
 ==== Run complete! ===
-Accession numbers of subspecies hits and description saved in testdata/getrecordOUT_L7_hits.tsv
-FASTA-formatted sequences saved in testdata/getrecordOUT_L7.fasta
+Accession numbers of subspecies hits and description saved in TAX_L7_hits.tsv
+FASTA-formatted sequences saved in TAX_L7.fasta
+Output taxonomy file saved in TAX_L7.taxonomy.tsv
 ```
 
 Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`):
@@ -103,6 +104,16 @@ Output TSV file example (`getrecordOUT_L7_hits.tsv` in folder `testdata`):
 ```
 Query   Accession       Gene definition txid    Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence
 Ahliesaurus berryi      EU366544        Ahliesaurus berryi voucher MCZ 161662 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial       509771  Eukaryota       Chordata        Actinopteri     Aulopiformes    Notosudidae     Ahliesaurus     Ahliesaurus berryi      GTGAACATGAGGTGGGCTCAGACGATAAAGCCTAGGAGGCCGATTGCTATCATAGCTCAGACCATGCCCATGTAGCCAAAGGGTTCTTTTTTCCCTGAATAGTAGGCTACGATGTGGGAGATCATACCAAAGCCGGGGAGAATAAGAATGTAGACCTCTGGGTGACCAAAGAATCAGAACAGGTGCTGGTAAAGGATGGGGTCTCCGCCCCCTGCCGGGTCAAAGAAGGTGGTGTTCAGGTTTCGGTCAGTTAGAAGTATTGTAATGCCTGCCGCTAGAACGGGGAGGGAGAGTAAAAGAAGGACGGCAGTAATAAGGACTGCTCAGACGAAGAGGGGAGTTTGGTACTGGGTGATGGCGGGGGGTTTTATGTTAATAATTGTTGTGATGAAGTTAATGGCACCCAGGATAGAGGAGATACCTGCCAGGTGGAGGGAGAAGATGGTTAGGTCTACGGAAGCTCCTGCATGGGCCAGGTTGCTGGCGAGAGGCGGATACACAGTTCATCCTGTTCCGGCCCCGGCTTCTACAGCGGAGGAGGCTAGGAGTAGAAGGAAGGATGGGGGGAGTAGTCAAAAGCTCATGTTGTTCATTCGGGGGAATGCCATGTCAGGCGCCCCGATCATAAGAGGGATAAGTCAGTTTCCGAACCCACCGATCATAATTGGTATTACCATGAAAAAAATTATTACGAAAGCGTGGGCAGTAACGATAACATTGTAAATCTGGTCGTCTCCTAAAAGGGCTCCGGGTTGGCTTAGCTCAGCTCGGATGAGAAGGCT
+```
+Output taxonomy file example (`getrecordOUT_L7_taxonomy.tsv` in folder `testdata`):
+
+```
+Feature ID      Taxon
+EU366544        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__Notosudidae; g__Ahliesaurus; s__Ahliesaurus berryi
+KF929574        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__Notosudidae; g__Ahliesaurus; s__Ahliesaurus berryi
+AF092181        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__Alepisauridae; g__Alepisaurus; s__Alepisaurus ferox
+AP004211        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__Alepisauridae; g__Alepisaurus; s__Alepisaurus ferox
+EU366542        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__Alepisauridae; g__Alepisaurus; s__Alepisaurus ferox
 ```
 
 getalignment
