@@ -29,7 +29,7 @@ If running using your system's default Python software and packages:
 
 `./mitohelper.py --help` or `python mitohelper.py --help`
 
-If running in a conda environment or using other non-default versions of python, change `#!/usr/bin/python` to the correct path or run:
+If running in a conda environment or using other non-default versions of Python, change `#!/usr/bin/python` to the correct path or run:
 
 `python mitohelper.py --help`
 
