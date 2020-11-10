@@ -19,11 +19,12 @@ def mitohelper():
 @mitohelper.command()
 @click.option('-i','--input_file', required=True, type=str, help='Input query file (e.g. input.txt)')
 @click.option('-o','--output_prefix', required=True, type=str, help='Output prefix (e.g. OUT)')
-@click.option('-d','--database_file', required=True, type=str, help='Database file (e.g. mitofish.all.Nov2020.tsv')
+@click.option('-d','--database_file', required=True, type=str, help='Database file (e.g. mitofish.all.Nov2020.tsv)')
 @click.option('-l','--tax_level',type=click.Choice(["1","2","3","4","5","6","7"]), help='The taxonomic level of the search (e.g 7 for species, 6 for genus etc)')
 @click.option('--fasta/--no-fasta', default=False, help='Generate FASTA file output containing sequences of all matching hits (default=FALSE)')
+@click.option('--taxout/--no-tax', default=False, help='Generate taxonomy file output for all matching hits (default=FALSE)')
 
-def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
+def getrecord(input_file,output_prefix,database_file,tax_level,fasta,taxout):
 	
 	"""Retrieve fish mitochondrial records from taxa list"""
 
@@ -38,14 +39,22 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 	if path.exists(full_path):
 		sys.exit("Error: Output TSV file exists! Please rename output TSV file and try again!")
 
+	# Write header line in output file
+	output=open(full_path,'a')
+	output.write("Query\tAccession\tGene definition\ttaxid\tSuperkingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\tSequence\n")
+
 	if fasta:
 		fasta_path=(output_prefix+"_L"+tax_level+".fasta")
 		if path.exists(fasta_path):
 			sys.exit("Error: Output FASTA file exists! Please rename output FASTA file and try again!")
 		fasta=open(fasta_path,'a')
 
-	output=open(full_path,'a')
-	output.write("Query\tAccession\tGene definition\ttxid\tSuperkingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\tSequence\n")
+	if taxout:
+		tax_path=(output_prefix+"_L"+tax_level+".taxonomy.tsv")
+		if path.exists(tax_path):
+			sys.exit("Error: Output taxonomy file exists! Please rename output taxonomy file and try again!")
+		taxfile=open(tax_path,'a')
+		taxfile.write("Feature ID\tTaxon\n")
 
 	# This matchme function performs matching and writes results to the output file
 
@@ -62,6 +71,19 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 						acc=str(fields[0])
 						seq=str(fields[10])
 						fasta.write(">%s\n%s" % (acc,seq))
+				
+					if taxout:
+						fields=line.rsplit("\t")
+						acc=str(fields[0])
+						domain=str(fields[3])
+						phylum=str(fields[4])
+						tclass=str(fields[5])
+						order=str(fields[6])
+						family=str(fields[7])
+						genus=str(fields[8])
+						species=str(fields[9])
+
+						taxfile.write("%s\td__%s; p__%s; c__%s; o__%s; f__%s; g__%s; s__%s\n" % (acc,domain,phylum,tclass,order,family,genus,species))
 
 		print("Search string:%s\tTaxonomic level:L%s\tHits:%d" % (query,tax_level,count))
 		return;
@@ -109,6 +131,9 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta):
 
 	if fasta:
 		print ("FASTA-formatted sequences saved in %s" % fasta_path)
+
+	if taxout:
+		print ("Output taxonomy file saved in %s" % tax_path)
 
 
 
