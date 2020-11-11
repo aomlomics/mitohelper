@@ -23,15 +23,8 @@ Required python modules:
 
 Usage
 ----
-> Note: The interpreter used in the first line of `mitohelper.py` is `#!/usr/bin/python`
 
-If running using your system's default Python software and packages:
-
-`./mitohelper.py --help` or `python mitohelper.py --help`
-
-If running in a conda environment or using other non-default versions of Python, change `#!/usr/bin/python` to the correct path or run:
-
-`python mitohelper.py --help`
+`mitohelper.py --help`
 
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
@@ -68,7 +61,7 @@ Options:
 
 Usage example:
 ```
-python mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Nov2020.tsv -l 7 --fasta --taxout
+mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Nov2020.tsv -l 7 --fasta --taxout
 ```
 
 Input file example (`species.query.txt` in folder `testdata`):
@@ -122,7 +115,7 @@ Graphical output with reference sequence on top:
 
 <img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
-`python mitohelper.py getalignment --help`
+`mitohelper.py getalignment --help`
 
 ```
 Usage: mitohelper.py getalignment [OPTIONS]
@@ -147,7 +140,7 @@ Options:
 Usage example:
 
 ```
-python mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
+mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
 ```
 
 Screen log:
