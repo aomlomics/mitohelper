@@ -55,9 +55,9 @@ Options:
 ```
 
 > Reference database files can be downloaded from http://doi.org/10.5281/zenodo.4266949
-> - mitofish.all.Nov2020.tsv (660,961 records; Nov 2020 update)
-> - mitofish.12S.Nov2020.tsv (37,102 records)
-> - mitofish.COI.Nov2020.tsv (221,613 records)
+> - mitofish.all.Dec2020.tsv (660,976 records; Nov 2020 update)
+> - mitofish.12S.Dec2020.tsv (37,117 records)
+> - mitofish.COI.Dec2020.tsv (221,628 records)
 
 Usage example:
 ```
