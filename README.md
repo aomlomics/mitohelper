@@ -55,7 +55,7 @@ Options:
 ```
 
 > Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4302541.svg">](http://doi.org/10.5281/zenodo.4302541)
-> - mitofish.all.Dec2020.tsv (660,976 records; Nov 2020 update)
+> - mitofish.all.Dec2020.tsv (660,976 records)
 > - mitofish.12S.Dec2020.tsv (37,117 records)
 > - mitofish.COI.Dec2020.tsv (221,628 records)
 
