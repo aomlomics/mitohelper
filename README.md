@@ -37,7 +37,7 @@ Options:
 
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
   -d, --database_file TEXT        Database file (e.g.
-                                  mitofish.all.Nov2020.tsv)  [required]
+                                  mitofish.all.Dec2020.tsv)  [required]
 
   -l, --tax_level [1|2|3|4|5|6|7]
                                   The taxonomic level of the search (e.g 7 for
