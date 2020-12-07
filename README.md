@@ -61,7 +61,7 @@ Options:
 
 Usage example:
 ```
-mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Nov2020.tsv -l 7 --fasta --taxout
+mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Dec2020.tsv -l 7 --fasta --taxout
 ```
 
 Input file example (`species.query.txt` in folder `testdata`):
