@@ -19,7 +19,7 @@ def mitohelper():
 @mitohelper.command()
 @click.option('-i','--input_file', required=True, type=str, help='Input query file (e.g. input.txt)')
 @click.option('-o','--output_prefix', required=True, type=str, help='Output prefix (e.g. OUT)')
-@click.option('-d','--database_file', required=True, type=str, help='Database file (e.g. mitofish.all.Dec2020.tsv)')
+@click.option('-d','--database_file', required=True, type=str, help='Database file (e.g. mitofish.all.Jan2021.tsv)')
 @click.option('-l','--tax_level',type=click.Choice(["1","2","3","4","5","6","7"]), help='The taxonomic level of the search (e.g 7 for species, 6 for genus etc)')
 @click.option('--fasta/--no-fasta', default=False, help='Generate FASTA file output containing sequences of all matching hits (default=FALSE)')
 @click.option('--taxout/--no-tax', default=False, help='Generate taxonomy file output for all matching hits (default=FALSE)')
