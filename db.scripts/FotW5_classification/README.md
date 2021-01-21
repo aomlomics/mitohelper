@@ -6,4 +6,3 @@ This folder contains:
 * A detailed version of the classification scheme ([FotW5Classification.pdf](https://81a86d48-a-62cb3a1a-s-sites.googlegroups.com/site/fotw5th/home/FotW5Classification.pdf))
 * Tab-separated text file of the order classification scheme (FotW5_order.tsv) 
 * Tab-separated text file of the family classification scheme (FotW5_family.tsv)
-* R script that combines mitofish reference file with the Fishes of the World order and family numbers (FotW5.R)
