@@ -167,10 +167,10 @@ Table of alignment positions saved in blastnALN.alnpositions.tsv
 Plot of alignment positions saved in blastnALN.alnpositions.pdf
 ```
 
-blastn `-outfmt 7` input/output (`alignmentOUT.blastn.txt` in folder `testdata`):
+blastn `-outfmt 7` input/output (`blastnALN.blastn.txt` in folder `testdata`):
 
 ```
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: NC_002333.2:1020-1971 Danio rerio mitochondrion, complete genome
 # Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
@@ -184,17 +184,17 @@ Tab-separated output (`blastnALN.alnpositions.tsv` in folder `testdata`):
 
 ```
 Accession       Start   End     Bit_Score
-NC_002333.2:1020-1971   1       952     37
-AB938103        249     348     1099
-AB006953        1       945     484
-AB015962        102     945     550
-AB016274        17      945     473
-AB018224        2       825     471
-AB018225        2       804     491
-AB018226        1       825     520
-AB018227        1       804     505
-AB018228        1       825     506
-AB018229        1       804     513
+NC_002333.2:1020-1971   1       952     1718
+AB938103        249     348     37
+AB006953        1       945     1099
+AB015962        102     945     484
+AB016274        17      945     549
+AB018224        2       825     473
+AB018225        2       804     471
+AB018226        1       825     491
+AB018227        1       804     520
+AB018228        1       825     504
+AB018229        1       804     506
 AB018230        1       825     513
 ```
 
