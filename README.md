@@ -93,20 +93,20 @@ Output taxonomy file saved in TAX_L7.taxonomy.tsv
 ```
 
 Output TSV file columns and example (`getrecordOUT_L7_hits.tsv` in folder `testdata`):
-> * Query
-> * Accession - NCBI accession 
-> * Gene definition - Gene definition in GenBank record
-> * taxid - NCBI taxonomy ID
-> * Superkingdom
-> * Phylum
-> * Class
-> * Order
-> * Family
-> * Genus
-> * Species
-> * Sequence
-> * OrderID - Order classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
-> * FamilyID - Family classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
+> 1. Query
+> 2. Accession - NCBI accession 
+> 3. Gene definition - Gene definition in GenBank record
+> 4. taxid - NCBI taxonomy ID
+> 5. Superkingdom
+> 6. Phylum
+> 7. Class
+> 8. Order
+> 9. Family
+> 10. Genus
+> 11. Species
+> 12. Sequence
+> 13. OrderID - Order classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
+> 14. FamilyID - Family classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
 
 ```
 Query   Accession       Gene definition taxid   Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence        OrderID FamilyID
