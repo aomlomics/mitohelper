@@ -106,7 +106,7 @@ Output TSV file columns and example (`getrecordOUT_L7_hits.tsv` in folder `testd
 > * Species
 > * Sequence
 > * OrderID - Order classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
-> * FamilyID - Family classificatio in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
+> * FamilyID - Family classification in ["Fishes of the World, 5th edition" (Nelson et al. 2016)](https://www.wiley.com/en-us/Fishes+of+the+World%2C+5th+Edition-p-9781118342336)
 
 ```
 Query   Accession       Gene definition taxid   Superkingdom    Phylum  Class   Order   Family  Genus   Species Sequence        OrderID FamilyID
