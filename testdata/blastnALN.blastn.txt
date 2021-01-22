@@ -1,18 +1,18 @@
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: NC_002333.2:1020-1971 Danio rerio mitochondrion, complete genome
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 NC_002333.2:1020-1971	NC_002333.2:1020-1971	100.000	952	0	0	1	952	1	952	0.0	1718
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB938103
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB938103	NC_002333.2:1020-1971	69.811	106	24	4	2	105	249	348	9.05e-07	37.4
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB006953
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 7 hits found
 AB006953	NC_002333.2:1020-1971	86.211	950	123	7	991	1937	1	945	0.0	1099
@@ -22,65 +22,65 @@ AB006953	NC_002333.2:1020-1971	100.000	11	0	0	13117	13127	381	391	6.8	21.1
 AB006953	NC_002333.2:1020-1971	100.000	11	0	0	6434	6444	459	469	6.8	21.1
 AB006953	NC_002333.2:1020-1971	100.000	11	0	0	4702	4712	833	843	6.8	21.1
 AB006953	NC_002333.2:1020-1971	100.000	11	0	0	5512	5522	858	868	6.8	21.1
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB015962
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 4 hits found
 AB015962	NC_002333.2:1020-1971	73.642	865	192	18	171	1020	102	945	2.07e-139	484
 AB015962	NC_002333.2:1020-1971	89.474	19	2	0	1100	1118	602	620	0.16	26.5
 AB015962	NC_002333.2:1020-1971	100.000	12	0	0	12	23	393	382	2.0	22.9
 AB015962	NC_002333.2:1020-1971	100.000	11	0	0	14659	14669	278	288	6.8	21.1
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB016274
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 6 hits found
-AB016274	NC_002333.2:1020-1971	74.549	943	202	23	85	1003	17	945	5.84e-159	550
+AB016274	NC_002333.2:1020-1971	74.549	943	202	23	85	1003	17	945	5.84e-159	549
 AB016274	NC_002333.2:1020-1971	100.000	12	0	0	13901	13912	601	612	1.9	22.9
 AB016274	NC_002333.2:1020-1971	100.000	11	0	0	5467	5477	459	469	6.7	21.1
 AB016274	NC_002333.2:1020-1971	100.000	11	0	0	8411	8421	601	611	6.7	21.1
 AB016274	NC_002333.2:1020-1971	100.000	11	0	0	15782	15792	753	763	6.7	21.1
 AB016274	NC_002333.2:1020-1971	100.000	11	0	0	11745	11755	880	870	6.7	21.1
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018224
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018224	NC_002333.2:1020-1971	74.132	835	192	18	4	825	2	825	1.83e-137	473
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018225
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018225	NC_002333.2:1020-1971	74.447	814	184	18	4	804	2	804	6.40e-137	471
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018226
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018226	NC_002333.2:1020-1971	74.491	835	189	17	3	823	1	825	6.81e-143	491
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018227
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018227	NC_002333.2:1020-1971	75.430	814	177	15	3	803	1	804	1.41e-151	520
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018228
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
-AB018228	NC_002333.2:1020-1971	74.580	834	191	14	3	824	1	825	1.08e-146	505
-# BLASTN 2.9.0+
+AB018228	NC_002333.2:1020-1971	74.580	834	191	14	3	824	1	825	1.08e-146	504
+# BLASTN 2.6.0+
 # Query: AB018229
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018229	NC_002333.2:1020-1971	75.061	814	181	15	3	804	1	804	3.10e-147	506
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: AB018230
-# Database: User specified sequence set (Input: Zebrafish.12S.ref.fasta)
+# Database: User specified sequence set (Input: testdata/Zebrafish.12S.ref.fasta)
 # Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 # 1 hits found
 AB018230	NC_002333.2:1020-1971	74.850	835	187	15	3	824	1	825	2.09e-149	513
