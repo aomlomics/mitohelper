@@ -6,3 +6,5 @@ This folder contains:
 * A detailed version of the classification scheme ([FotW5Classification.pdf](https://81a86d48-a-62cb3a1a-s-sites.googlegroups.com/site/fotw5th/home/FotW5Classification.pdf)) - last updated January 11 2018
 * Tab-separated text file of the order classification scheme (`FotW5_order.tsv`) 
 * Tab-separated text file of the family classification scheme (`FotW5_family.tsv`)
+
+> <b>Note</b>: Some of the classifications may be outdated and some new or re-classified fish orders and families are not yet classified in the book. 
