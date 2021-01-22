@@ -41,7 +41,7 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta,taxout):
 
 	# Write header line in output file
 	output=open(full_path,'a')
-	output.write("Query\tAccession\tGene definition\ttaxid\tSuperkingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\tSequence\n")
+	output.write("Query\tAccession\tGene definition\ttaxid\tSuperkingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\tSequence\tOrderID\tFamilyID\n")
 
 	if fasta:
 		fasta_path=(output_prefix+"_L"+tax_level+".fasta")
