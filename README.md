@@ -54,10 +54,10 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4458571.svg">](http://doi.org/10.5281/zenodo.4458571)
-> - mitofish.all.Jan2021.tsv (668,366 records)
-> - mitofish.12S.Jan2021.tsv (37,314 records)
-> - mitofish.COI.Jan2021.tsv (224,712 records)
+> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4533045.svg">](http://doi.org/10.5281/zenodo.4533045)
+> - mitofish.all.Feb2021.tsv (668,366 records)
+> - mitofish.12S.Feb2021.tsv (37,314 records)
+> - mitofish.COI.Feb2021.tsv (224,712 records)
 
 Usage example:
 ```
