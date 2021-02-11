@@ -54,7 +54,7 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4533045.svg">](http://doi.org/10.5281/zenodo.4533045)
+> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4533286.svg">](http://doi.org/10.5281/zenodo.4533286)
 > - mitofish.all.Feb2021.tsv (668,366 records)
 > - mitofish.12S.Feb2021.tsv (37,314 records)
 > - mitofish.COI.Feb2021.tsv (224,712 records)
