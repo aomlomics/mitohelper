@@ -15,16 +15,25 @@ Dependencies
 
 
 Required python modules:
-- click (v7.1.2) - `pip install click` or `conda install -c conda-forge click=7.1.2`
-- matplotlib (v3.3.0) - `pip install matplotlib` or `conda install matplotlib=3.3.0`
-- pandas (v0.25.3) - `pip install pandas` or `conda install pandas=0.25.3`
-- seaborn (v0.10.1) - `pip install seaborn` or `conda install seaborn=0.10.1`
+- click (v7.1.2)
+- matplotlib (v3.3.4)
+- pandas (v0.25.3)
+- seaborn (v0.10.1)
 
+  Installation:
+  - pip:  
+    ```
+    pip install -r requirements.txt
+    ```
+  - conda:  
+    ```
+    conda install --file requirements.txt
+    ```
 
 Usage
 ----
 
-`mitohelper.py --help`
+`python mitohelper.py getrecord --help`
 
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
