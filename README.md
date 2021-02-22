@@ -34,7 +34,7 @@ Required python modules:
 Usage
 ----
 
-`python mitohelper.py getrecord --help`
+`mitohelper.py --help`
 
 ```
 Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
