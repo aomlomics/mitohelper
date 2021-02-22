@@ -16,7 +16,7 @@ Dependencies
 
 Required python modules:
 - click (v7.1.2) - `pip install click` or `conda install -c conda-forge click=7.1.2`
-- matplotlib (v3.3.0) - `pip install matplotlib` or `conda install matplotlib=3.3.0`
+- matplotlib (v3.3.4) - `pip install matplotlib` or `conda install matplotlib=3.3.4`
 - pandas (v0.25.3) - `pip install pandas` or `conda install pandas=0.25.3`
 - seaborn (v0.10.1) - `pip install seaborn` or `conda install seaborn=0.10.1`
 
