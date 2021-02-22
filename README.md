@@ -30,10 +30,24 @@ Required python modules:
     conda install --file requirements.txt
     ```
 
+
 Usage
 ----
 
 `python mitohelper.py getrecord --help`
+
+```
+Usage: mitohelper.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  getalignment  Pairwise align input sequences against a reference
+  getrecord     Retrieve fish mitochondrial records from taxa list
+ ```
+
+`mitohelper.py getrecord --help`
 
 ```
 Usage: mitohelper.py getrecord [OPTIONS]
