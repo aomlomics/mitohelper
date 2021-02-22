@@ -1,0 +1,5 @@
+click==7.1.2
+matplotlib==3.3.4
+pandas==0.25.3
+seaborn==0.10.1
+
