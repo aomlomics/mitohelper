@@ -70,7 +70,7 @@ def getrecord(input_file,output_prefix,database_file,tax_level,fasta,taxout):
 						fields=line.rsplit("\t")
 						acc=str(fields[0])
 						seq=str(fields[10])
-						fasta.write(">%s\n%s" % (acc,seq))
+						fasta.write(">%s\n%s\n" % (acc,seq))
 				
 					if taxout:
 						fields=line.rsplit("\t")
