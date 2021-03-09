@@ -187,7 +187,7 @@ Table of alignment positions saved in blastnALN.alnpositions.tsv
 Plot of alignment positions saved in blastnALN.alnpositions.pdf
 ```
 
-blastn `-outfmt 7` input/output (`testdata/blastnALN.blastn.txt`):
+- blastn `-outfmt 7` input/output (`testdata/blastnALN.blastn.txt`):
 
 ```
 # BLASTN 2.6.0+
