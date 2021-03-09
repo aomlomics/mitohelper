@@ -115,7 +115,7 @@ FASTA-formatted sequences saved in testdata/getrecordOUT_L7.fasta
 Output taxonomy file saved in testdata/getrecordOUT_L7.taxonomy.tsv
 ```
 
-Output TSV file columns and example (`testdata/getrecordOUT_L7_hits.tsv`):
+- Output TSV file columns and example (`testdata/getrecordOUT_L7_hits.tsv`):
 > 1. Query
 > 2. Accession - NCBI accession 
 > 3. Gene definition - Gene definition in GenBank record
