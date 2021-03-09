@@ -87,7 +87,7 @@ Usage example:
 mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Mar2021.tsv -l 7 --fasta --taxout
 ```
 
-Input file example (`species.query.txt` in folder `testdata`):
+Input file example (`testdata/species.query.txt`):
 
 ```
 Abraliopsis pfefferi
