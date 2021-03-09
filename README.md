@@ -82,12 +82,12 @@ Options:
 > - mitofish.12S.Mar2021.tsv (37,314 records)
 > - mitofish.COI.Mar2021.tsv (224,712 records)
 
-Usage example:
+- Usage example:
 ```
 mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Mar2021.tsv -l 7 --fasta --taxout
 ```
 
-Input file example (`testdata/species.query.txt`):
+- Input file example (`testdata/species.query.txt`):
 
 ```
 Abraliopsis pfefferi
@@ -97,7 +97,7 @@ anotopterus pharao
 AHLIESAURUS BERRYI
 ```
 
-Screen output:
+- Screen output:
 
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
@@ -172,17 +172,13 @@ Options:
 
 ```
 
-Usage example:
+- Usage example:
 
 ```
 mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
 ```
 
-Graphical output with reference sequence on top (`testdata/blastnALN.alnpositions.pdf`):
-
-<img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
-
-Screen output:
+- Screen output:
 
 ```
 ==== Run complete! ===
@@ -202,7 +198,11 @@ blastn `-outfmt 7` input/output (`testdata/blastnALN.blastn.txt`):
 NC_002333.2:1020-1971   NC_002333.2:1020-1971   100.000 952     0       0       1       952     1       952     0.0     1718
 ```
 
-Tab-separated output (`testdata/blastnALN.alnpositions.tsv`):
+- Graphical output with reference sequence on top (`testdata/blastnALN.alnpositions.pdf`):
+
+<img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
+
+- Tab-separated output (`testdata/blastnALN.alnpositions.tsv`):
 
 *Reference sequence will always be on top.*
 
