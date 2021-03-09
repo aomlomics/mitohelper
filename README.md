@@ -149,9 +149,6 @@ EU366542        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__A
 
 getalignment
 ----
-Graphical output with reference sequence on top (`testdata/blastnALN.alnpositions.pdf`):
-
-<img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
 `mitohelper.py getalignment --help`
 
@@ -180,6 +177,10 @@ Usage example:
 ```
 mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
 ```
+
+Graphical output with reference sequence on top (`testdata/blastnALN.alnpositions.pdf`):
+
+<img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
 Screen output:
 
