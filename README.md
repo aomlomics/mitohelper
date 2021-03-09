@@ -149,7 +149,7 @@ EU366542        d__Eukaryota; p__Chordata; c__Actinopteri; o__Aulopiformes; f__A
 
 getalignment
 ----
-Graphical output with reference sequence on top:
+Graphical output with reference sequence on top (`testdata/blastnALN.alnpositions.pdf`):
 
 <img src="https://github.com/aomlomics/Mitohelper/blob/master/testdata/getalignment_out.PNG" width="807" height="481.8">
 
@@ -221,6 +221,6 @@ AB018229        1       804     506
 AB018230        1       825     513
 ```
 
-Graphical output (`blastnALN.alnpositions.pdf` in folder `testdata`):
+
 
 
