@@ -4,7 +4,7 @@ MitoFish sequence data can be downloaded from
 - http://mitofish.aori.u-tokyo.ac.jp/files/mitogenomes.zip - sequence file of annotated complete mitogenomes mitogenomes.zip)
 
 
-> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4533286.svg">](http://doi.org/10.5281/zenodo.4533286)
-> - mitofish.all.Feb2021.tsv (668,366 records)
-> - mitofish.12S.Feb2021.tsv (37,314 records)
-> - mitofish.COI.Feb2021.tsv (224,712 records)
+> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4589660.svg">](https://zenodo.org/record/4589660#.YEb3LC2z0hV)
+> - mitofish.all.Mar2021.tsv (681,971 records)
+> - mitofish.12S.Mar2021.tsv (37,841 records)
+> - mitofish.COI.Mar2021.tsv (229,905 records)
