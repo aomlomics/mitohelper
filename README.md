@@ -97,7 +97,7 @@ anotopterus pharao
 AHLIESAURUS BERRYI
 ```
 
-Screen log:
+Screen output:
 
 ```
 === Searching query #1: <Abraliopsis pfefferi> ===
@@ -110,12 +110,12 @@ Search string:Anotopterus pharao	Taxonomic level:L7	Hits:9
 === Searching query #5: <AHLIESAURUS BERRYI> ===
 DUPLICATE WARNING: Query has already been processed!
 ==== Run complete! ===
-Accession numbers of subspecies hits and description saved in TAX_L7_hits.tsv
-FASTA-formatted sequences saved in TAX_L7.fasta
-Output taxonomy file saved in TAX_L7.taxonomy.tsv
+Accession numbers of subspecies hits and description saved in testdata/getrecordOUT_L7_hits.tsv
+FASTA-formatted sequences saved in testdata/getrecordOUT_L7.fasta
+Output taxonomy file saved in testdata/getrecordOUT_L7.taxonomy.tsv
 ```
 
-Output TSV file columns and example (`getrecordOUT_L7_hits.tsv` in folder `testdata`):
+Output TSV file columns and example (`testdata/getrecordOUT_L7_hits.tsv`):
 > 1. Query
 > 2. Accession - NCBI accession 
 > 3. Gene definition - Gene definition in GenBank record
@@ -136,7 +136,7 @@ Query   Accession       Gene definition taxid   Superkingdom    Phylum  Class   
 Ahliesaurus berryi      EU366544        Ahliesaurus berryi voucher MCZ 161662 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial       509771  Eukaryota       Chordata        Actinopteri     Aulopiformes    Notosudidae     Ahliesaurus     Ahliesaurus berryi      GTGAACATGAGGTGGGCTCAGACGATAAAGCCTAGGAGGCCGATTGCTATCATAGCTCAGACCATGCCCATGTAGCCAAAGGGTTCTTTTTTCCCTGAATAGTAGGCTACGATGTGGGAGATCATACCAAAGCCGGGGAGAATAAGAATGTAGACCTCTGGGTGACCAAAGAATCAGAACAGGTGCTGGTAAAGGATGGGGTCTCCGCCCCCTGCCGGGTCAAAGAAGGTGGTGTTCAGGTTTCGGTCAGTTAGAAGTATTGTAATGCCTGCCGCTAGAACGGGGAGGGAGAGTAAAAGAAGGACGGCAGTAATAAGGACTGCTCAGACGAAGAGGGGAGTTTGGTACTGGGTGATGGCGGGGGGTTTTATGTTAATAATTGTTGTGATGAAGTTAATGGCACCCAGGATAGAGGAGATACCTGCCAGGTGGAGGGAGAAGATGGTTAGGTCTACGGAAGCTCCTGCATGGGCCAGGTTGCTGGCGAGAGGCGGATACACAGTTCATCCTGTTCCGGCCCCGGCTTCTACAGCGGAGGAGGCTAGGAGTAGAAGGAAGGATGGGGGGAGTAGTCAAAAGCTCATGTTGTTCATTCGGGGGAATGCCATGTCAGGCGCCCCGATCATAAGAGGGATAAGTCAGTTTCCGAACCCACCGATCATAATTGGTATTACCATGAAAAAAATTATTACGAAAGCGTGGGCAGTAACGATAACATTGTAAATCTGGTCGTCTCCTAAAAGGGCTCCGGGTTGGCTTAGCTCAGCTCGGATGAGAAGGCT  44      214
 Ahliesaurus berryi      KF929574        Ahliesaurus berryi voucher KUT 5285 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial 509771  Eukaryota       Chordata        Actinopteri     Aulopiformes    Notosudidae     Ahliesaurus     Ahliesaurus berryi      CCTCTACCTACTATTTGGTGCCTGGGCCGGGATGGTGGGTACAGCCCTAAGCCTTCTCATCCGAGCTGAGCTAAGCCAACCCGGAGCCCTTTTAGGAGACGACCAGATTTACAATGTTATCGTTACTGCCCACGCTTTCGTAATAATTTTTTTCATGGTAATACCAATTATGATCGGTGGGTTCGGAAACTGACTTATCCCTCTTATGATCGGGGCGCCTGACATGGCATTCCCCCGAATGAACAACATGAGCTTTTGACTACTCCCCCCATCCTTCCTTCTACTCCTAGCCTCCTCCGCTGTAGAAGCCGGGGCCGGAACAGGATGAACTGTGTATCCGCCTCTCGCCAGCAACCTGGCCCATGCAGGAGCTTCCGTAGACCTAACCATCTTCTCCCTCCACCTGGCAGGTATCTCCTCTATCCTGGGTGCCATTAACTTCATCACAACAATTATTAACATAAAACCCCCCGCCATCACCCAGTACCAAACTCCCCTCTTCGTCTGAGCAGTCCTTATTACTGCCGTCCTTCTTTTACTCTCCCTCCCCGTTCTAGCGGCAGGCATTACAATACTTCTAACTGACCGAAACCTGAACACCACCTTCTTTGACCCGGCAGGGGGCGGAGACCCCATCCTTTACCAGCACCTG    44      214
 ```
-Output taxonomy file example (`getrecordOUT_L7_taxonomy.tsv` in folder `testdata`):
+Output taxonomy file example (`testdata/getrecordOUT_L7_taxonomy.tsv`):
 > The output taxonomy file can be directly imported into [QIIME 2](https://qiime2.org)
 ```
 Feature ID      Taxon
@@ -181,7 +181,7 @@ Usage example:
 mitohelper.py getalignment -i testdata/12S.test.fasta -o testdata/blastnALN -r testdata/Zebrafish.12S.ref.fasta --blastn-task blastn
 ```
 
-Screen log:
+Screen output:
 
 ```
 ==== Run complete! ===
@@ -190,7 +190,7 @@ Table of alignment positions saved in blastnALN.alnpositions.tsv
 Plot of alignment positions saved in blastnALN.alnpositions.pdf
 ```
 
-blastn `-outfmt 7` input/output (`blastnALN.blastn.txt` in folder `testdata`):
+blastn `-outfmt 7` input/output (`testdata/blastnALN.blastn.txt`):
 
 ```
 # BLASTN 2.6.0+
@@ -201,7 +201,7 @@ blastn `-outfmt 7` input/output (`blastnALN.blastn.txt` in folder `testdata`):
 NC_002333.2:1020-1971   NC_002333.2:1020-1971   100.000 952     0       0       1       952     1       952     0.0     1718
 ```
 
-Tab-separated output (`blastnALN.alnpositions.tsv` in folder `testdata`):
+Tab-separated output (`testdata/blastnALN.alnpositions.tsv`):
 
 *Reference sequence will always be on top.*
 
