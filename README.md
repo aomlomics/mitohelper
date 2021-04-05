@@ -78,9 +78,9 @@ Options:
 ```
 
 > Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4589660.svg">](https://zenodo.org/record/4589660#.YEb3LC2z0hV)
-> - mitofish.all.Mar2021.tsv (681,971 records)
-> - mitofish.12S.Mar2021.tsv (37,841 records)
-> - mitofish.COI.Mar2021.tsv (229,905 records)
+> - mitofish.all.Apr2021.tsv (82,011 records; Apr 2021 MitoFish release without obsolete record [MW387537](www.ncbi.nlm.nih.gov/nuccore/MW387537.1?report=genbank))
+> - mitofish.12S.Apr2021.tsv (37,880 records)
+> - mitofish.COI.Mar2021.tsv (229,944 records)
 
 - Usage example:
 ```
