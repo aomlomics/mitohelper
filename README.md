@@ -1,11 +1,16 @@
 # Mitohelper
 
+**Citation**
+> Jean Lim, S, Thompson, LR. Mitohelper: A mitochondrial reference sequence analysis tool for fish eDNA studies. Environmental DNA. 2021; 00: 1– 10.  https://doi.org/10.1002/edn3.187
+
+
 **Mitohelper** is a Python-based mitochondrial reference sequence analysis tool for fish eDNA studies. It is useful for researchers interested in:
 
 - finding out whether mitochondrial reference sequences exist for specific fish species/taxonomy (`getrecord` command in `mitohelper.py`)
 - finding out which specific region of a mitochondrial gene has been sequenced (by aligning with a reference sequence) (`getalignment` command in  `mitohelper.py`)
 - using pre-formatted QIIME-compatible ribosomal RNA (12S or 12S+16S+18S) sequence and taxonomy databases for downstream analysis (available in the `QIIME-compatible` folder) 
 - knowing more about our data processing pipeline and mitohelper algorithm (visit the [DevWiki](https://github.com/aomlomics/mitohelper/wiki/) for all the nitty gritty details!)
+
 
 Dependencies
 ----
