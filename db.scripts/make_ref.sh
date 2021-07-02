@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-month=Mar2021
+month=Jul2021
 
 # Search for 12S genes and complete mitogenomes from main mitohelper reference file
 
@@ -14,7 +14,7 @@ sed "s/^/\^/" 12S.unconventional.acc >12S.unconventional.grep
 
 for i in `cat 12S.unconventional.grep`
 do
-grep -m 1 $i mitofish.new.tsv >>mitofish.12S.unconventional.tsv
+grep -m 1 $i mitofish.all."$month".tsv >>mitofish.12S.unconventional.tsv
 done
 
 # Combine 12S datasets and de-duplicate
