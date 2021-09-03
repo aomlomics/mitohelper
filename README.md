@@ -65,7 +65,7 @@ Options:
 
   -o, --output_prefix TEXT        Output prefix (e.g. OUT)  [required]
   -d, --database_file TEXT        Database file (e.g.
-                                  mitofish.all.Mar2021.tsv)  [required]
+                                  mitofish.all.Sep2021.tsv)  [required]
 
   -l, --tax_level [1|2|3|4|5|6|7]
                                   The taxonomic level of the search (e.g 7 for
@@ -82,14 +82,15 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5059742.svg">](https://doi.org/10.5281/zenodo.5059742)
-> - mitofish.all.Jul2021.tsv (701,894 records)
-> - mitofish.12S.Jul2021.tsv (38,451 records)
-> - mitofish.COI.Jul2021.tsv (239,330 records)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.5403427.svg>](https://doi.org/10.5281/zenodo.5403427)
+> - mitofish.all.Sep2021.tsv (712,927 records)
+> - mitofish.12S.Sep2021.tsv (38,699 records)
+> - mitofish.COI.Sep2021.tsv (244,767 records)
+
 
 - Usage example:
 ```
-mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Jul2021.tsv -l 7 --fasta --taxout
+mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Sep2021.tsv -l 7 --fasta --taxout
 ```
 
 - Input file example (`testdata/species.query.txt`):
