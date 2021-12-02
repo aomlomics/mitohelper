@@ -83,14 +83,14 @@ Options:
 ```
 
 > Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.5551226.svg>](https://doi.org/10.5281/zenodo.5551226)
-> - mitofish.all.Oct2021.tsv (712,967 records)
-> - mitofish.12S.Oct2021.tsv (38,739 records)
-> - mitofish.COI.Oct2021.tsv (244,807 records)
+> - mitofish.all.Dec2021.tsv (724,918 records)
+> - mitofish.12S.Dec2021.tsv (39,085 records; added new keyword `genome assembly`)
+> - mitofish.COI.Dec2021.tsv (249,538 records; added new keyword `genome assembly`)
 
 
 - Usage example:
 ```
-mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Oct2021.tsv -l 7 --fasta --taxout
+mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Dec2021.tsv -l 7 --fasta --taxout
 ```
 
 - Input file example (`testdata/species.query.txt`):
