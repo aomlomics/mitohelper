@@ -83,9 +83,10 @@ Options:
 ```
 
 > Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.5816200.svg>](https://doi.org/10.5281/zenodo.5816200)
-> - mitofish.all.Jan2022.tsv (730,137 records)
-> - mitofish.12S.Jan2022.tsv (39,245 records)
-> - mitofish.COI.Jan2022.tsv (253,034 records)
+> - mitofish.all.Mar2022.tsv (738,038 records)
+> - mitofish.12S.Mar2022.tsv (40,019 records)
+> - mitofish.COI.Mar2022.tsv (257,414 records)
+
 
 - Usage example:
 ```
