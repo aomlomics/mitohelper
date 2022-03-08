@@ -82,7 +82,7 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.5816200.svg>](https://doi.org/10.5281/zenodo.5816200)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.6336244.svg>](https://doi.org/10.5281/zenodo.6336244)
 > - mitofish.all.Mar2022.tsv (738,038 records)
 > - mitofish.12S.Mar2022.tsv (40,019 records)
 > - mitofish.COI.Mar2022.tsv (257,414 records)
