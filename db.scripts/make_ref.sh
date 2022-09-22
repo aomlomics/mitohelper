@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-month=Mar2022
+month=Sep2022
 
 # Search for 12S genes and complete mitogenomes from main mitohelper reference file
 
@@ -21,7 +21,7 @@ mitofish.all."$month".tsv >mitofish.12S.partI.tsv
 
 # Combine 12S datasets and de-duplicate
 
-cat mitofish.12S.partI.tsv mitofish.12S.unconventional.tsv | sort | uniq >mitofish.12S.noheader.tsv
+cat mitofish.12S.partI.tsv mitofish.12S.unconventional.tsv | tr -d "\r" | sort | uniq >mitofish.12S.noheader.tsv
 cat mitofish.header mitofish.12S.noheader.tsv >mitofish.12S."$month".tsv
 
 # Extract COI hits and filter out cytochrome b records
