@@ -82,15 +82,15 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.6811493.svg>](https://doi.org/10.5281/zenodo.6811493)
-> - mitofish.all.Jul2022.tsv (748,772 records)
-> - mitofish.12S.Jul2022.tsv (40,541 records)
-> - mitofish.COI.Jul2022.tsv (265,763 records)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.7105046.svg>](https://doi.org/10.5281/zenodo.7105046)
+> - mitofish.all.Sep2022.tsv (756,196 records)
+> - mitofish.12S.Sep2022.tsv (40,721 records)
+> - mitofish.COI.Sep2022.tsv (269,479 records)
 
 
 - Usage example:
 ```
-mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Dec2021.tsv -l 7 --fasta --taxout
+mitohelper.py getrecord -i testdata/species.query.txt -o testdata/getrecordOUT -d mitofish.all.Sep2022.tsv -l 7 --fasta --taxout
 ```
 
 - Input file example (`testdata/species.query.txt`):
