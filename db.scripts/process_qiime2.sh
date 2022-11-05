@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-month=Mar2022
+month=Nov2022
 
 # Download and export QIIME-compatible SILVA NR99 full-length sequences and taxonomy
 # wget https://data.qiime2.org/2020.11/common/silva-138-99-seqs.qza
@@ -8,11 +8,9 @@ month=Mar2022
 # qiime tools export --input-path silva-138-99-seqs.qza --output-path silva138.99.seq
 # qiime tools export --input-path silva-138-99-tax.qza --output-path silva138.99.tax
 
-echo "Convert mitofish 12S table into FASTA file.."
-cat mitofish.12S."$month".tsv | awk -F "\t" '{OFS="#"}{print $1,$11}' | grep -v "Accession#Sequence" | sed "s/^/>/" | tr "#" "\n" >mitofish.12S."$month".fasta
-
-echo "Extract list of accession numbers (feature IDs).."
-cut -f1 mitofish.12S."$month".tsv | sed "s/Accession/Feature ID/" >12S.featureID
+echo "Extract list of accession numbers (feature IDs) from deduplicated fasta file.."
+echo "Feature ID" >12S.featureID
+grep ">" mitofish.12S."$month"_NR.fasta | tr -d ">" >>12S.featureID
 
 echo "Extract taxonomic information (domain through species).."
 cut -f6 mitofish.12S."$month".tsv | sed "s/^/d__Eukaryota; p__Chordata; c__/" | sed "s/$/;/" >12S.class
@@ -28,7 +26,7 @@ echo "Merge feature ID and taxon information.."
 paste -d "\t" 12S.featureID 12S.taxon >12S.taxonomy.tsv
 
 echo "Import 12S sequences and taxonomies into QIIME2.."
-qiime tools import --type 'FeatureData[Sequence]' --input-path mitofish.12S."$month".fasta --output-path 12S-seqs.qza
+qiime tools import --type 'FeatureData[Sequence]' --input-path mitofish.12S."$month"_NR.fasta --output-path 12S-seqs.qza
 qiime tools import --type 'FeatureData[Taxonomy]' --input-path 12S.taxonomy.tsv --output-path 12S-tax.qza
 
 echo "Remove sequences with >=5 ambiguous bases and homopolymers>=8bp long.."
