@@ -8,7 +8,7 @@ seen=set()
 month=str("Nov2022")
 
 with open("mitofish.12S."+month+".fasta", 'r') as fasta:
-	outfile=str("mitofish.12S.Nov2022_NR.fasta")
+	outfile=str("mitofish.12S."+month+"_NR.fasta")
 	output=open(outfile,'w')
 	for line in fasta.readlines():
 		if re.search(">",line):
