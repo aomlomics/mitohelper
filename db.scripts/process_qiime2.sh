@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-month=Nov2022
+month=Apr2023
 
 # Download and export QIIME-compatible SILVA NR99 full-length sequences and taxonomy
 # wget https://data.qiime2.org/2020.11/common/silva-138-99-seqs.qza
@@ -34,7 +34,7 @@ qiime rescript cull-seqs --i-sequences 12S-seqs.qza --o-clean-sequences 12S-seqs
 
 echo "Dereplicate cleaned sequences in uniq mode to retain identical sequence records with differing taxonomies.."
 # Use vsearch bundled with qiime2 environment (V2.7.0). Do not use latest version of vsearch in bash profile
-qiime rescript dereplicate --i-sequences 12S-seqs-cleaned.qza --i-taxa 12S-tax.qza --p-rank-handles 'silva' --p-mode 'uniq' --o-dereplicated-sequences 12S-seqs-derep-uniq.qza --o-dereplicated-taxa 12S-tax-derep-uniq.qza
+qiime rescript dereplicate --i-sequences 12S-seqs-cleaned.qza --i-taxa 12S-tax.qza --p-mode 'uniq' --o-dereplicated-sequences 12S-seqs-derep-uniq.qza --o-dereplicated-taxa 12S-tax-derep-uniq.qza
 
 echo "Export cleaned and dereplicated 12S data.."
 qiime tools export --input-path 12S-seqs-derep-uniq.qza --output-path 12S.seq
