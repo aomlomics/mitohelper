@@ -82,7 +82,7 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [https://zenodo.org/badge/DOI/10.5281/zenodo.8239400.svg](https://doi.org/10.5281/zenodo.8239400)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.8239400.svg>](https://doi.org/10.5281/zenodo.8239400)
 > - mitofish.all.May2023.tsv (820,009 records)
 > - mitofish.12S.May2023.tsv (50,078 records)
 > - mitofish.12S.May2023_NR.fasta (fasta file of 12S rRNA gene records)
