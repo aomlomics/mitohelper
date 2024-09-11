@@ -5,10 +5,10 @@
 - All datasets are available for download at [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.13286432.svg>](https://doi.org/10.5281/zenodo.13286432)
 
 #### Dereplicated full-length 12S rRNA gene sequences
-- [12S-seqs-derep-uniq.qza](https://doi.org/10.5281/zenodo.13286432) (also in this folder)
-- [12S-tax-derep-uniq.qza](https://doi.org/10.5281/zenodo.13286432) (also in this folder)
+- [12S-seqs-derep-uniq.qza](https://doi.org/10.5281/zenodo.13742317) (also in this folder)
+- [12S-tax-derep-uniq.qza](https://doi.org/10.5281/zenodo.13742317) (also in this folder)
 
 #### Dereplicated full-length 12S + SILVA (16S and 18S) rRNA gene sequences
-- [12S-16S-18S-seqs.qza](https://doi.org/10.5281/zenodo.13286432) (file size too large to be in this folder)
-- [12S-16S-18S-tax.qza](https://doi.org/10.5281/zenodo.13286432) (also in this folder)
+- [12S-16S-18S-seqs.qza](https://doi.org/10.5281/zenodo.13742317) (file size too large to be in this folder)
+- [12S-16S-18S-tax.qza](https://doi.org/10.5281/zenodo.13742317) (also in this folder)
 
