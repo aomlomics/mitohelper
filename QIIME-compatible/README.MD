@@ -10,5 +10,5 @@
 
 #### Dereplicated full-length 12S + SILVA (16S and 18S) rRNA gene sequences
 - [12S-16S-18S-seqs.qza](https://doi.org/10.5281/zenodo.14104370) (file size too large to be in this folder)
-- [12S-16S-18S-tax.qza](https://doi.org/10.5281/zenodo.13742317) (also in this folder)
+- [12S-16S-18S-tax.qza](https://doi.org/10.5281/zenodo.14104370) (also in this folder)
 
