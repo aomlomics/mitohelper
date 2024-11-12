@@ -82,11 +82,11 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.13742317.svg>](https://doi.org/10.5281/zenodo.13742317)
-> - mitofish.all.Sep2024.tsv (870,372 records)
-> - mitofish.12S.Sep2024.tsv (60,501 records)
-> - mitofish.12S.Sep2024_NR.fasta (FASTA file of 12S rRNA gene records)
-> - mitofish.COI.Sep2024.tsv (316,251 records)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.14104370.svg>](https://doi.org/10.5281/zenodo.14104370)
+> - mitofish.all.Nov2024.tsv (870,372 records)
+> - mitofish.12S.Nov2024.tsv (60,501 records)
+> - mitofish.12S.Nov2024_NR.fasta (FASTA file of 12S rRNA gene records)
+> - mitofish.COI.Nov2024.tsv (316,251 records)
 
 - Usage example:
 ```
