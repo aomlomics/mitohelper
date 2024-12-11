@@ -20,7 +20,8 @@ cut -f9 mitofish.12S."$month".tsv | sed "s/^/g__/" | sed "s/$/;/" >12S.genus
 cut -f10 mitofish.12S."$month".tsv | sed "s/^/s__/" >12S.species
 
 echo "Combine all taxonomic name columns.."
-paste -d " " 12S.class 12S.order 12S.family 12S.genus 12S.species | sed "s/.*f__Family.*$/Taxon/" >12S.taxon
+echo "Taxon" >12S.taxon
+paste -d " " 12S.class 12S.order 12S.family 12S.genus 12S.species | sed "s/.*f__Family.*$/Taxon/" >>12S.taxon
 
 echo "Merge feature ID and taxon information.."
 paste -d "\t" 12S.featureID 12S.taxon >12S.taxonomy.tsv
