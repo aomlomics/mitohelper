@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-month=Apr2023
+month=Dec2024
 
 # Download and export QIIME-compatible SILVA NR99 full-length sequences and taxonomy
 # wget https://data.qiime2.org/2020.11/common/silva-138-99-seqs.qza
