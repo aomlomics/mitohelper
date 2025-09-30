@@ -1,7 +1,33 @@
-MitoFish sequence data can be downloaded from [MitoFish's download page](http://mitofish.aori.u-tokyo.ac.jp/download/)
+MitoFish sequence data can be downloaded from `https://mitofish.aori.u-tokyo.ac.jp/download/fullseq/latest/mitofishdb.fa.gz` 
 
-* `mitogenomes.zip` - sequence file of annotated complete mitogenomes
-* `complete_partial_mitogenomes.zip` - sequence file of all complete + partial mtDNA sequences
+It is a `gzipped` FASTA file rather than `zip`.
+
+**Sequence Title**
+
+For each sequence, the title only contains GenBank accessions, such as:
+
+```
+>AB374153
+CAGAAAGAAGATTATAAACCCACCCCTACCCAGAAAGAAGATTATAAACCCACCCCTACCCACAAAG
+AAAGGAGATTCTAACTCCCACCCCTAACTCCCAAAGCTAGGATTCTAAGCTAAACTATTCTTTG
+```
+
+However, if multiple accessions share identical sequences, they are combined into one entry, separated by ';', such as:
+```
+>OR134897;OR134896
+CCCTTTACTTAGTATTTGGTGCATGAGCCGGAATAGTTGGCACAGCTCTTAGCCTCTTAATCCGGGCC
+GAGCTAAGCCAACCCGGCTCCCTACTAGGTGACGACCAGATCTACAATGTCATCGTTACTGCACACGC
+ATTCGTGATAATTTTCTTTATAGTAATGCCAATTATGATTGGAGGCTTTGGGAACTGACTAGTACCCCTT
+ATGATCGGAGCACCAGACATGGCATTTCCACGAATAAATAACATGAGCTTCTGACTACTCCCCCCATCA
+TTCCTGCTTCTCCTAGCCTCTTCCGGCGTTGAAGCGGGGGCTGGAACAGGTTGAACTGTATACCCACC
+CCTTGCCGGCAACCTCGCCCATGCGGGAGCCTCAGTTGATTTAACCATCTTCTCACTACATCTGGCCG
+GTGTTTCCTCAATCCTAGGGGCAATCAACTTCATTACCACAATTATTAACATGAAACCCCCAGCCATCTC
+CCAATACCAAACCCCCCTATTCGTCTGAGCTGTACTCATTACAGCCGTCTTACTTCTCCTTTCATTACCA
+GTCCTAGCTGCCGGCATTACAATGCTGCTAACAGACCGAAATTTAAACACCACCTTCTTCGACCCTGCA
+GGAGGGGGAGACCCAATTTTATACCAACACTTGTTC
+``` 
+which means OR134897 and OR134896 share identical sequences
+
 
 > Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.15028392.svg>](https://doi.org/10.5281/zenodo.15028392)
 > - mitofish.all.Mar2025.tsv (883,519 records)
