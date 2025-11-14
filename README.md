@@ -82,11 +82,14 @@ Options:
 
 ```
 
-> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.15028392.svg>](https://doi.org/10.5281/zenodo.15028392)
-> - mitofish.all.Mar2025.tsv (883,519 records)
-> - mitofish.12S.Mar2025.tsv (61,379 records of 12S rRNA gene >50 bp long)
+
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.17602902.svg>](https://doi.org/10.5281/zenodo.17602902)
+
+> **Nov2025 update**: The MitoFish database underwent a major update since September 30th (UTC + 9) where duplicated records were combined into one entry. The Nov2025 version of Mitohelper's reference datasets was de-deduplicated based on updated records in the September 30th version of the MitoFish database.
+> - mitofish.all.Nov.2025.tsv (558,313 de-duplicated records)
+> - mitofish.12S.Mar2025.tsv (64,059 records of 12S rRNA gene >50 bp long)
 > - mitofish.12S.Mar2025_NR.fasta (FASTA file of 12S rRNA gene records)
-> - mitofish.COI.Mar2025.tsv (323,337 records)
+> - mitofish.COI.Mar2025.tsv (200,911 de-duplicated records)
 
 - Usage example:
 ```
