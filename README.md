@@ -83,7 +83,7 @@ Options:
 ```
 
 
-> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.17602902.svg>](https://doi.org/10.5281/zenodo.17602902)
+> Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.21326269.svg>](https://doi.org/10.5281/zenodo.21326269)
 
 > **Jul2026 update**: New NCBI records added. Database was further deduplicated.
 > - mitofish.all.Jul.2026.tsv (594,266 de-duplicated records)
