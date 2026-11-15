@@ -82,8 +82,9 @@ Options:
 
 ```
 
-
 > Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.21326269.svg>](https://doi.org/10.5281/zenodo.21326269)
+
+> **Nov2026 update**: There were taxonomic ID mismatches in the new records added to the Jul 2026 reference dataset. I am working to update these datasets on Zenodo. In the meantime, the fixed July2026 12S dataset `mitofish.12S.Jul2026.fixed.tsv` can be downloaded from [here](https://usf.box.com/shared/static/8ngjnujm1huv5w2pf0c05ydt90z0hcp7.tsv).
 
 > **Jul2026 update**: New NCBI records added. Database was further deduplicated.
 > - mitofish.all.Jul.2026.tsv (594,266 de-duplicated records)
