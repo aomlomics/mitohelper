@@ -31,10 +31,10 @@ GGAGGGGGAGACCCAATTTTATACCAACACTTGTTC
 which means OR134897 and OR134896 share identical sequences
 
 ## Mitohelper
-Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.21326269.svg>](https://doi.org/10.5281/zenodo.21326269)
+Reference database files can be downloaded from [<img src=https://zenodo.org/badge/DOI/10.5281/zenodo.24249581.svg>](https://doi.org/10.5281/zenodo.24249581)
 
-> **Jul2026 update**: New NCBI records added. Database was further deduplicated.
-> - mitofish.all.Jul.2026.tsv (594,266 de-duplicated records)
-> - mitofish.12S.Jul2026.tsv (66,798 records of 12S rRNA gene >50 bp long)
+> **Nov2026 update**: There were taxonomic ID mismatches in the new records added to the Jul 2026 reference dataset. Please use the latest dataset which has been fixed.
+> - mitofish.all.Jul2026.fixed.tsv (594,266 de-duplicated records)
+> - mitofish.12S.Jul2026.fixed.tsv (66,794 records of 12S rRNA gene >50 bp long)
 > - mitofish.12S.Jul2026_NR.fasta (FASTA file of 12S rRNA gene records)
-> - mitofish.COI.Jul2026.tsv (229,609 de-duplicated records)
+> - mitofish.COI.Jul2026.fixed.tsv (229,609 de-duplicated records)
